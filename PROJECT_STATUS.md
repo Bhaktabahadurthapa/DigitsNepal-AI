@@ -26,6 +26,7 @@ provider). It has **not** been demonstrated with a paid LLM or on a deployed env
 | AI evaluation suite (extractive) | **73/75** (2 failures documented in `docs/evaluation.md`) |
 | Backup → restore round trip (local Docker Postgres) | pass |
 | REA research captures (Honen, 11 scenarios) and REA visual QA of the local app (4 scenarios) | done |
+| Re-verification after a Postgres restart (2026-10-21) | all of the above re-run and green; worker now survives DB restarts (verified by restarting the container under a running worker) |
 
 ## Feature status
 
