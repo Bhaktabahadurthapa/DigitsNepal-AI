@@ -30,21 +30,21 @@ export default async function HomePage() {
 
   return (
     <>
-      <section className="bg-navy text-white">
-        <div className="mx-auto grid max-w-7xl items-center gap-10 px-4 py-16 sm:px-6 lg:grid-cols-2 lg:py-24">
+      <section className="paper-grid border-b border-line bg-bg text-ink">
+        <div className="mx-auto grid max-w-7xl items-center gap-12 px-4 py-20 sm:px-6 lg:grid-cols-[1.1fr_.9fr] lg:py-28">
           <div>
-            <p className="mb-3 text-sm font-semibold uppercase tracking-wider text-teal-50" lang="ne">
-              एआई सिकौँ। एआई एजेन्ट बनाऔँ। नेपाललाई डिजिटल बनाऔँ।
+            <p className="editorial-kicker mb-4 text-lg">
+              Simple AI learning for everyday life in Nepal
             </p>
-            <h1 className="text-4xl font-bold leading-tight tracking-tight sm:text-5xl">{t.home.heroTitle}</h1>
-            <p className="mt-5 max-w-xl text-lg text-slate-300">{t.home.heroSubtitle}</p>
+            <h1 className="max-w-3xl text-5xl font-semibold leading-[1.02] sm:text-7xl">{t.home.heroTitle}</h1>
+            <p className="mt-6 max-w-xl text-xl leading-relaxed text-muted">{t.home.heroSubtitle}</p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Button asChild size="lg" variant="primary">
                 <Link href="/academy">
                   {t.home.ctaStart} <ArrowRight aria-hidden />
                 </Link>
               </Button>
-              <Button asChild size="lg" variant="outlineOnDark">
+              <Button asChild size="lg" variant="outline">
                 <Link href="/organizations">{t.home.ctaExplore}</Link>
               </Button>
             </div>
@@ -54,13 +54,13 @@ export default async function HomePage() {
       </section>
 
       <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6" aria-labelledby="modules-title">
-        <h2 id="modules-title" className="text-3xl font-bold text-navy">{t.home.modulesTitle}</h2>
+        <h2 id="modules-title" className="text-4xl font-semibold text-navy">{t.home.modulesTitle}</h2>
         <p className="mt-2 max-w-2xl text-muted">{t.home.modulesSubtitle}</p>
         <ul className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
           {modules.map((m) => (
             <li key={m.href}>
-              <Link href={m.href} className="group flex h-full flex-col rounded-xl border border-line bg-surface p-5 shadow-sm transition-shadow hover:shadow-md">
-                <m.icon className="size-8 text-teal-700" aria-hidden />
+              <Link href={m.href} className="group flex h-full flex-col rounded-md border border-line bg-surface p-5 transition-colors hover:border-[#aaa69a] hover:bg-white">
+                <m.icon className="size-7 text-teal-700" strokeWidth={1.6} aria-hidden />
                 <h3 className="mt-3 font-semibold text-ink group-hover:text-teal-700">{m.title}</h3>
                 <p className="mt-1 text-sm text-muted">{m.body}</p>
               </Link>
@@ -71,11 +71,11 @@ export default async function HomePage() {
 
       <section className="border-y border-line bg-surface" aria-labelledby="how-title">
         <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6">
-          <h2 id="how-title" className="text-3xl font-bold text-navy">{t.home.howTitle}</h2>
+          <h2 id="how-title" className="text-4xl font-semibold text-navy">{t.home.howTitle}</h2>
           <ol className="mt-8 grid gap-4 md:grid-cols-5">
             {t.home.how.map((s, i) => (
-              <li key={s.title} className="relative rounded-xl bg-bg p-5">
-                <span className="flex size-9 items-center justify-center rounded-full bg-navy text-sm font-bold text-white" aria-hidden>
+              <li key={s.title} className="relative border-l border-line bg-bg p-5 first:border-l-0">
+                <span className="flex size-8 items-center justify-center rounded-full bg-[#e6ded0] text-sm font-bold text-ink" aria-hidden>
                   {i + 1}
                 </span>
                 <h3 className="mt-3 font-semibold">{s.title}</h3>
@@ -89,14 +89,14 @@ export default async function HomePage() {
       <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6" aria-labelledby="courses-title">
         <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
           <div>
-            <h2 id="courses-title" className="text-3xl font-bold text-navy">{t.home.coursesTitle}</h2>
+            <h2 id="courses-title" className="text-4xl font-semibold text-navy">{t.home.coursesTitle}</h2>
             <p className="mt-2 text-muted">{t.home.coursesSubtitle}</p>
           </div>
           <Button asChild variant="outline">
             <Link href="/academy">{t.home.viewAll}</Link>
           </Button>
         </div>
-        <ul className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <ul className="mt-8 grid gap-px overflow-hidden rounded-md border border-line bg-line sm:grid-cols-2 lg:grid-cols-3">
           {featured.map((c) => (
             <li key={c.slug}>
               <CourseCard c={c} t={t} />

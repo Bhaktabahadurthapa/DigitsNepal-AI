@@ -1,4 +1,4 @@
-import { BookOpen, Clock } from "lucide-react";
+import { ArrowUpRight, BookOpen, Clock } from "lucide-react";
 import Link from "next/link";
 import { Badge } from "@/components/ui/feedback";
 import type { Dict } from "@/lib/i18n";
@@ -24,7 +24,7 @@ export function CourseCard({ c, t }: { c: CourseCardData; t: Dict }) {
         {soon && <Badge tone="amber">{t.common.comingSoon}</Badge>}
       </div>
       <h3 className="mt-3 text-lg font-semibold leading-snug text-ink" lang={c.language}>
-        {c.title}
+        <span className="flex items-start justify-between gap-4">{c.title}{!soon && <ArrowUpRight className="mt-1 size-4 shrink-0 text-muted transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" aria-hidden />}</span>
       </h3>
       <p className="mt-1 line-clamp-3 text-sm text-muted" lang={c.language}>
         {c.summary}
@@ -37,11 +37,11 @@ export function CourseCard({ c, t }: { c: CourseCardData; t: Dict }) {
       )}
     </>
   );
-  const cls = "flex h-full flex-col rounded-xl border border-line bg-surface p-5 shadow-sm";
+  const cls = "group flex h-full flex-col rounded-md border border-line bg-surface p-6";
   return soon ? (
     <div className={`${cls} opacity-80`} aria-disabled>{body}</div>
   ) : (
-    <Link href={`/academy/${c.slug}`} className={`${cls} transition-shadow hover:shadow-md focus-visible:shadow-md`}>
+    <Link href={`/academy/${c.slug}`} className={`${cls} transition-[border-color,background-color] hover:border-[#aaa69a] hover:bg-white`}>
       {body}
     </Link>
   );

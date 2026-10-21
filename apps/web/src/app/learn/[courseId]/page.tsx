@@ -5,8 +5,8 @@ import { CompleteLesson, LessonVisit } from "@/components/player/complete-lesson
 import { Flashcards } from "@/components/player/flashcards";
 import { OutlineDrawer } from "@/components/player/outline-drawer";
 import { QuizPanel } from "@/components/player/quiz";
+import { LessonConceptMap } from "@/components/player/lesson-concept-map";
 import { TutorPanel } from "@/components/player/tutor-panel";
-import { LanguageSwitch } from "@/components/site/language-switch";
 import { LogoMark } from "@/components/site/logo";
 import { Button } from "@/components/ui/button";
 import { ProgressBar } from "@/components/ui/feedback";
@@ -80,7 +80,6 @@ export default async function LearnPage({ params, searchParams }: Props) {
         <Link href="/dashboard/learner" aria-label={t.nav.dashboard} className="shrink-0"><LogoMark /></Link>
         <OutlineDrawer label={t.player.outline}>{outline}</OutlineDrawer>
         <p className="min-w-0 flex-1 truncate font-semibold" lang={course.language}>{snapshot.title}</p>
-        <LanguageSwitch className="hidden sm:inline-flex" />
       </header>
       <div className="mx-auto flex w-full max-w-[1600px] flex-1">
         <aside className="hidden w-72 shrink-0 overflow-y-auto border-r border-line bg-surface p-4 lg:block">{outline}</aside>
@@ -95,6 +94,7 @@ export default async function LearnPage({ params, searchParams }: Props) {
                 <ul className="mt-1 list-disc pl-5 text-sm">{lesson.objectives.map((o) => <li key={o}>{o}</li>)}</ul>
               </div>
             )}
+            <LessonConceptMap lessonId={lesson.id} title={lesson.title} objectives={lesson.objectives} language={course.language} />
             <div className="prose-lesson mt-6" dangerouslySetInnerHTML={{ __html: html }} />
             {lesson.citations.length > 0 && (
               <section aria-labelledby="refs" className="mt-8 border-t border-line pt-4">

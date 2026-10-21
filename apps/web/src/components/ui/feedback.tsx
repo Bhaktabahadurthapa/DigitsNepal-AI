@@ -22,7 +22,7 @@ export function Alert({
 }) {
   const { cls, Icon } = tones[tone];
   return (
-    <div role={tone === "error" ? "alert" : "status"} className={cn("flex gap-3 rounded-lg border p-4 text-sm", cls, className)}>
+    <div role={tone === "error" ? "alert" : "status"} className={cn("flex gap-3 rounded-md border p-5 text-sm", cls, className)}>
       <Icon aria-hidden className="mt-0.5 size-5 shrink-0" />
       <div className="space-y-1">
         {title && <p className="font-semibold">{title}</p>}

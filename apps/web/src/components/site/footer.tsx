@@ -12,19 +12,19 @@ export async function SiteFooter() {
     { title: t.footer.about, links: [{ href: "/about", label: t.footer.about }, { href: "/contact", label: t.footer.contact }, { href: "/accessibility", label: t.footer.accessibility }, { href: "/privacy", label: t.footer.privacy }, { href: "/terms", label: t.footer.terms }] },
   ];
   return (
-    <footer className="bg-navy text-slate-200">
+    <footer className="border-t border-line bg-[#e9e6dc] text-ink">
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-4">
         <div className="space-y-3">
-          <Logo name={t.brand.name} dark />
-          <p className="text-sm text-slate-300">{t.footer.mission}</p>
+          <Logo name={t.brand.name} />
+          <p className="text-sm text-muted">{t.footer.mission}</p>
         </div>
         {cols.map((c) => (
           <nav key={c.title} aria-label={c.title}>
-            <h2 className="mb-3 text-sm font-semibold text-white">{c.title}</h2>
+            <h2 className="mb-3 text-sm font-semibold text-ink">{c.title}</h2>
             <ul className="space-y-2 text-sm">
               {c.links.map((l) => (
                 <li key={l.href + l.label}>
-                  <Link href={l.href} className="text-slate-300 hover:text-white hover:underline">
+                  <Link href={l.href} className="text-muted hover:text-ink hover:underline">
                     {l.label}
                   </Link>
                 </li>
@@ -33,8 +33,8 @@ export async function SiteFooter() {
           </nav>
         ))}
       </div>
-      <div className="border-t border-white/10">
-        <div className="mx-auto flex max-w-7xl flex-col gap-2 px-4 py-6 text-xs text-slate-400 sm:flex-row sm:justify-between sm:px-6">
+      <div className="border-t border-line">
+        <div className="mx-auto flex max-w-7xl flex-col gap-2 px-4 py-6 text-xs text-muted sm:flex-row sm:justify-between sm:px-6">
           <p>© {new Date().getFullYear()} DigitsNepal. {t.footer.rights}</p>
           <p>{t.footer.status}</p>
         </div>

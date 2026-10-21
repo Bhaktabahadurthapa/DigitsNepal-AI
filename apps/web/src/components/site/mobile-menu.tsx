@@ -6,7 +6,6 @@ import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { useI18n } from "@/lib/i18n/client";
-import { LanguageSwitch } from "./language-switch";
 
 export function MobileMenu({ links, signedIn }: { links: { href: string; label: string }[]; signedIn: boolean }) {
   const [open, setOpen] = useState(false);
@@ -55,7 +54,6 @@ export function MobileMenu({ links, signedIn }: { links: { href: string; label: 
             </ul>
           </nav>
           <div className="mt-4 flex flex-col gap-3">
-            <LanguageSwitch className="self-start" />
             {signedIn ? (
               <Button asChild variant="primary" size="lg">
                 <Link href="/dashboard/learner">{t.nav.dashboard}</Link>

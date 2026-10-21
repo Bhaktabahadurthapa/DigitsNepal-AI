@@ -2,24 +2,24 @@
 
 /* DigitsNepal design tokens. Contrast pairs are chosen to meet WCAG 2.2 AA (≥4.5:1 for text). */
 :root {
-  --navy: #0d2338;
-  --navy-700: #163452;
-  --teal: #0d9488;
-  --teal-700: #0f766e; /* text-on-light teal: 5.4:1 on white */
-  --teal-50: #f0fdfa;
+  --navy: #191918;
+  --navy-700: #34332f;
+  --teal: #9a452c;
+  --teal-700: #843820;
+  --teal-50: #f7e8e0;
   --red: #dc2626;
   --red-700: #b91c1c;
-  --bg: #f8fafc;
-  --surface: #ffffff;
-  --text: #0f172a;
-  --muted: #64748b; /* 4.76:1 on white */
-  --border: #e2e8f0;
-  --ring: #0d9488;
+  --bg: #f7f6f2;
+  --surface: #fcfbf7;
+  --text: #191918;
+  --muted: #686760;
+  --border: #dcd9cf;
+  --ring: #8a3a22;
   --amber: #b45309;
   --amber-50: #fffbeb;
-  --green: #15803d;
-  --green-50: #f0fdf4;
-  --radius: 0.75rem;
+  --green: #4e6538;
+  --green-50: #edf1e6;
+  --radius: 0.625rem;
 }
 
 @theme inline {
@@ -40,8 +40,9 @@
   --color-amber-50: var(--amber-50);
   --color-green: var(--green);
   --color-green-50: var(--green-50);
-  --font-sans: var(--font-inter), var(--font-devanagari), ui-sans-serif, system-ui, sans-serif;
-  --font-nepali: var(--font-devanagari), var(--font-inter), sans-serif;
+  --font-sans: var(--font-sans-display), var(--font-devanagari), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-serif-display), Georgia, serif;
+  --font-nepali: var(--font-devanagari), var(--font-sans-display), sans-serif;
   --radius-xl: var(--radius);
 }
 
@@ -54,6 +55,21 @@ body {
   color: var(--text);
   font-family: var(--font-sans);
   line-height: 1.6;
+  letter-spacing: -0.006em;
+}
+
+h1, h2, h3 { letter-spacing: -0.025em; text-wrap: balance; }
+::selection { background: #d9cdb7; color: var(--text); }
+
+.editorial-kicker {
+  font-family: var(--font-serif);
+  font-style: italic;
+  color: var(--teal-700);
+}
+
+.paper-grid {
+  background-image: radial-gradient(rgba(25,25,24,.10) .7px, transparent .7px);
+  background-size: 20px 20px;
 }
 
 /* Nepali text needs a little more line height for vowel signs. */

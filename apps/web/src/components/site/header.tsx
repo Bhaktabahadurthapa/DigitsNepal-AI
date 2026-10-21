@@ -2,7 +2,6 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { getDict } from "@/lib/i18n";
 import { getViewer } from "@/server/authz";
-import { LanguageSwitch } from "./language-switch";
 import { Logo } from "./logo";
 import { MobileMenu } from "./mobile-menu";
 
@@ -17,17 +16,17 @@ export async function SiteHeader() {
     { href: "/about", label: t.nav.about },
   ];
   return (
-    <header className="sticky top-0 z-30 border-b border-line bg-surface/95 backdrop-blur">
+    <header className="sticky top-0 z-30 border-b border-line bg-bg/90 backdrop-blur-xl">
       <a href="#main" className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-2 focus:z-50 focus:rounded focus:bg-navy focus:px-3 focus:py-2 focus:text-white">
         {t.nav.skip}
       </a>
-      <div className="relative mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6">
+      <div className="relative mx-auto flex h-18 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6">
         <Logo name={t.brand.name} />
         <nav aria-label={t.nav.main} className="hidden lg:block">
           <ul className="flex items-center gap-1">
             {links.map((l) => (
               <li key={l.href}>
-                <Link href={l.href} className="rounded-md px-3 py-2 text-sm font-medium text-ink hover:bg-bg">
+                <Link href={l.href} className="rounded-md px-3 py-2 text-sm font-medium text-ink hover:bg-[#ebe9e1]">
                   {l.label}
                 </Link>
               </li>
@@ -35,7 +34,6 @@ export async function SiteHeader() {
           </ul>
         </nav>
         <div className="hidden items-center gap-2 lg:flex">
-          <LanguageSwitch />
           {viewer ? (
             <Button asChild size="md">
               <Link href="/dashboard/learner">{t.nav.dashboard}</Link>

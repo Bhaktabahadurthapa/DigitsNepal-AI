@@ -2,7 +2,7 @@ export const en = {
   meta: {
     title: "DigitsNepal AI: Learn AI. Build Agents. Transform Nepal.",
     description:
-      "Free AI education, intelligent learning tools and community-driven innovation for Nepal, in English and Nepali.",
+      "Free AI lessons in simple English, with examples from everyday life in Nepal.",
   },
   brand: { name: "DigitsNepal AI", tagline: "Learn AI. Build Agents. Transform Nepal." },
   nav: {
@@ -24,15 +24,15 @@ export const en = {
   },
   home: {
     heroTitle: "Learn AI. Build Intelligent Agents. Transform Nepal.",
-    heroSubtitle: "Free AI education, intelligent learning tools, and community-driven innovation for Nepal.",
+    heroSubtitle: "Learn AI in simple English. See how it connects to school, work, farming, local business, and community life in Nepal.",
     ctaStart: "Start learning",
     ctaExplore: "Explore AI solutions",
     modulesTitle: "One platform, five ways to grow",
-    modulesSubtitle: "Everything is free for learners. Each module links to a working part of the platform.",
+    modulesSubtitle: "Everything is free for learners. We use short sentences, clear diagrams, and familiar examples from Nepal.",
     modules: {
-      academy: { title: "AI Academy", body: "Free, bilingual courses on AI, prompting, agents and digital safety." },
+      academy: { title: "AI Academy", body: "Free courses in simple English about AI, prompting, agents, and digital safety." },
       studio: { title: "AI Course Studio", body: "Turn approved documents into reviewed courses with quizzes and citations." },
-      tutor: { title: "AI Tutor", body: "Ask questions about your lesson in English or Nepali and get answers grounded in the course." },
+      tutor: { title: "AI Tutor", body: "Ask a question in simple words. The tutor answers from your course and shows the source." },
       agents: { title: "Agent Lab", body: "Open-source, project-based tutorials for building practical AI agents." },
       good: { title: "AI for Good", body: "Supervised AI tools for schools and nonprofits, with humans in control." },
     },
@@ -63,7 +63,7 @@ export const en = {
       "DigitsNepal is at the pilot stage. We are not reporting impact numbers yet; we will publish verified figures once the pilot is underway.",
     impactPilot: "Proposed pilot",
     impactPilotBody:
-      "A small pilot with partner schools and nonprofits in Nepal to test bilingual AI lessons, the tutor, and educator-built courses.",
+      "A small test with schools and nonprofit groups in Nepal. We will test the lessons, AI Tutor, and educator tools.",
     impactJoin: "How to take part",
     impactJoinItems: [
       "Learners: take a free course and send us feedback.",
@@ -74,13 +74,13 @@ export const en = {
     faqTitle: "Frequently asked questions",
     faq: [
       { q: "Is DigitsNepal free?", a: "Yes. Public learning on DigitsNepal Academy is free. AI features have fair-use limits so the pilot stays affordable." },
-      { q: "Can I learn in Nepali?", a: "Yes. The interface is available in English and Nepali, and courses and the AI Tutor can be in either language." },
+      { q: "Is the English easy to understand?", a: "Yes. We use short sentences, explain technical words, and give examples from daily life in Nepal." },
       { q: "Does AI publish courses automatically?", a: "No. AI only drafts. An educator must review, edit and publish every course." },
       { q: "Where do the AI Tutor's answers come from?", a: "From the approved materials of the course you are studying. If the answer isn't there, the tutor says so instead of guessing." },
     ],
   },
   footer: {
-    mission: "Democratizing AI education and practical digital innovation for Nepal.",
+    mission: "Making AI easy to understand and useful in everyday life across Nepal.",
     about: "About",
     contact: "Contact",
     accessibility: "Accessibility",
@@ -115,7 +115,7 @@ export const en = {
     error: "Something went wrong. Please try again.",
     retry: "Retry",
     english: "English",
-    nepali: "नेपाली",
+    nepali: "Nepali",
   },
   auth: {
     signInTitle: "Sign in to DigitsNepal",

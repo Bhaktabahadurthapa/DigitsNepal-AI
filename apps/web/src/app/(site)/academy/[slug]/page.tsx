@@ -2,6 +2,7 @@ import { CheckCircle2, Clock, Info } from "lucide-react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { EnrollButton } from "@/components/course/enroll-button";
+import { CourseRoadmap } from "@/components/course/course-roadmap";
 import { ReportButton } from "@/components/course/report-button";
 import { Button } from "@/components/ui/button";
 import { Alert, Badge } from "@/components/ui/feedback";
@@ -24,7 +25,7 @@ export default async function CoursePage({ params }: Props) {
   const lessons = snapshot?.modules.flatMap((m) => m.lessons) ?? [];
   const minutes = lessons.reduce((n, l) => n + l.estimatedMinutes, 0);
   return (
-    <div className="mx-auto max-w-5xl px-4 py-12 sm:px-6">
+    <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:py-20">
       <nav aria-label="Breadcrumb" className="mb-4 text-sm text-muted">
         <Link href="/academy" className="underline">{t.nav.academy}</Link> / <span lang={course.language}>{course.title}</span>
       </nav>
@@ -33,8 +34,8 @@ export default async function CoursePage({ params }: Props) {
         <Badge lang={course.language}>{course.language === "ne" ? "नेपाली" : "English"}</Badge>
         {course.availability === "coming_soon" && <Badge tone="amber">{t.common.comingSoon}</Badge>}
       </div>
-      <h1 className="mt-3 text-3xl font-bold text-navy sm:text-4xl" lang={course.language}>{course.title}</h1>
-      <p className="mt-3 max-w-3xl text-lg text-muted" lang={course.language}>{course.summary}</p>
+      <h1 className="mt-5 max-w-4xl text-4xl font-semibold leading-[1.05] text-navy sm:text-6xl" lang={course.language}>{course.title}</h1>
+      <p className="mt-5 max-w-3xl text-xl leading-relaxed text-muted" lang={course.language}>{course.summary}</p>
       {course.notice && (
         <Alert tone="info" className="mt-6" title={t.common.status}>
           <span lang={course.language}>{course.notice}</span>
@@ -72,11 +73,13 @@ export default async function CoursePage({ params }: Props) {
             </section>
           )}
 
+          <CourseRoadmap title={snapshot.title} modules={snapshot.modules} />
+
           <section className="mt-10" aria-labelledby="curr">
             <h2 id="curr" className="text-xl font-semibold">{t.course.curriculum}</h2>
             <ol className="mt-3 space-y-3" lang={course.language}>
               {snapshot.modules.map((m, i) => (
-                <li key={m.id} className="rounded-xl border border-line bg-surface p-5">
+                <li key={m.id} className="rounded-md border border-line bg-surface p-6 transition-colors hover:border-[#aaa69a]">
                   <h3 className="font-semibold">{i + 1}. {m.title}</h3>
                   <ul className="mt-2 space-y-1 text-sm text-muted">
                     {m.lessons.map((l) => (

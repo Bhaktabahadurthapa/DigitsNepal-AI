@@ -1,4 +1,3 @@
-import { cookies } from "next/headers";
 import { type Dict, en } from "./en";
 import { ne } from "./ne";
 
@@ -11,8 +10,7 @@ export function isLocale(v: unknown): v is Locale {
 }
 
 export async function getLocale(): Promise<Locale> {
-  const v = (await cookies()).get(LOCALE_COOKIE)?.value;
-  return isLocale(v) ? v : "en";
+  return "en";
 }
 
 export async function getDict(): Promise<{ locale: Locale; t: Dict }> {

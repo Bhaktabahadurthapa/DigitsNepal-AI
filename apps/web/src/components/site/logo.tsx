@@ -1,25 +1,20 @@
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 
-/** Original DigitsNepal mark: a stylised mountain peak formed from a circuit trace. */
+/** Transparent DN wordmark rendered in the site's display font. */
 export function LogoMark({ className }: { className?: string }) {
   return (
-    <svg viewBox="0 0 32 32" aria-hidden className={cn("size-8", className)}>
-      <rect width="32" height="32" rx="8" fill="#0D2338" />
-      <path d="M5 24 L13 10 L17 17 L20 13 L27 24 Z" fill="#0D9488" />
-      <path d="M13 10 L15.5 14.3 L13 13 L10.6 14.2 Z" fill="#fff" />
-      <circle cx="20" cy="13" r="2" fill="#fff" />
-      <circle cx="24.5" cy="8" r="1.6" fill="#DC2626" />
-      <path d="M20 13 L24.5 8" stroke="#fff" strokeWidth="1.2" />
+    <svg viewBox="0 0 52 32" role="img" aria-label="DN" className={cn("h-8 w-[3.25rem]", className)}>
+      <text x="0" y="25" fontFamily="var(--font-sans-display), Figtree, sans-serif" fontSize="27" fontWeight="750" letterSpacing="-3.8"><tspan fill="#191918">D</tspan><tspan fill="#9A452C">N</tspan></text>
     </svg>
   );
 }
 
 export function Logo({ name, className, dark }: { name: string; className?: string; dark?: boolean }) {
   return (
-    <Link href="/" className={cn("inline-flex items-center gap-2 font-bold tracking-tight", dark ? "text-white" : "text-navy", className)}>
+    <Link href="/" className={cn("inline-flex items-center gap-2.5 font-semibold tracking-[-0.03em]", dark ? "text-white" : "text-navy", className)}>
       <LogoMark />
-      <span className="text-lg">{name}</span>
+      <span className="text-[1.08rem]">{name}</span>
     </Link>
   );
 }
