@@ -27,6 +27,22 @@ navLinks.addEventListener("click", (event) => {
   }
 });
 
+const currentPath = window.location.pathname.replace(/\/$/, "") || "/";
+document.querySelectorAll(".nav-links a").forEach((link) => {
+  const linkPath = new URL(link.href, window.location.origin).pathname.replace(/\/$/, "") || "/";
+  if (linkPath === currentPath) link.setAttribute("aria-current", "page");
+});
+
+document.querySelectorAll("[data-filter]").forEach((button) => {
+  button.addEventListener("click", () => {
+    const filter = button.dataset.filter;
+    document.querySelectorAll("[data-filter]").forEach((item) => item.setAttribute("aria-pressed", String(item === button)));
+    document.querySelectorAll("[data-stage]").forEach((item) => {
+      item.hidden = filter !== "all" && item.dataset.stage !== filter;
+    });
+  });
+});
+
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
