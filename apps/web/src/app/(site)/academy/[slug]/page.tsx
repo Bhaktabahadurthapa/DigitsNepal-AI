@@ -2,6 +2,7 @@ import { CheckCircle2, Clock, Info } from "lucide-react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { EnrollButton } from "@/components/course/enroll-button";
+import { ReportButton } from "@/components/course/report-button";
 import { Button } from "@/components/ui/button";
 import { Alert, Badge } from "@/components/ui/feedback";
 import { getDict } from "@/lib/i18n";
@@ -54,6 +55,7 @@ export default async function CoursePage({ params }: Props) {
                 <Link href={`/sign-in?next=${encodeURIComponent(`/academy/${course.slug}`)}`}>{t.course.signInToEnroll}</Link>
               </Button>
             )}
+            {viewer && <ReportButton courseId={course.id} />}
             <span className="inline-flex items-center gap-1 text-sm text-muted">
               <Clock className="size-4" aria-hidden /> {lessons.length} {t.common.lessons} · {minutes} {t.common.minutes}
             </span>

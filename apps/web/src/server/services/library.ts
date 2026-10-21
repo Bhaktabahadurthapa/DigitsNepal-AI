@@ -4,6 +4,7 @@ import type { Viewer } from "@/server/authz";
 import { db, schema } from "@/server/db";
 import { HttpError } from "@/server/errors";
 import { isEducator, loadAccessibleDocument, requireOrgRole } from "./access";
+import { hitRateLimit } from "./ai-guard";
 import { audit } from "./audit";
 import { checkUpload, safeFilename } from "./files";
 import { enqueueJob } from "./jobs";
@@ -18,6 +19,9 @@ export async function uploadDocument(
   if (!isEducator(v)) throw new HttpError(403, "educator_required");
   if (!opts.rightsConfirmed) throw new HttpError(400, "rights_not_confirmed", "Confirm that you have the right to use this material.");
   if (opts.organizationId) await requireOrgRole(v, opts.organizationId, ["owner", "admin", "member"]);
+  await hitRateLimit(`upload:${v.id}`, 30, 3600).catch(() => {
+    throw new HttpError(429, "rate_limited", "Too many uploads. Please wait and try again.");
+  });
   const check = checkUpload(file.name, file.bytes);
   if (!check.ok) throw new HttpError(400, check.reason);
 

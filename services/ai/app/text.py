@@ -24,6 +24,32 @@ def tokens(text: str) -> list[str]:
     return [t for t in _TOKEN_SPLIT.split(text.lower()) if t and t not in STOPWORDS and len(t) > 1]
 
 
+_NE_SUFFIXES = sorted(
+    ["हरूलाई", "हरूको", "हरूमा", "हरू", "लाई", "बाट", "देखि", "सम्म", "नुहोस्", "न्छ", "छन्", "को", "का", "की", "मा", "ले", "ने", "छ", "दै"],
+    key=len,
+    reverse=True,
+)
+_EN_SUFFIXES = ("ing", "ed", "es", "s")
+
+
+def stem(token: str) -> str:
+    """Very light stemming used for answer matching (not for embeddings)."""
+    if _DEVANAGARI.search(token):
+        for suf in _NE_SUFFIXES:
+            if token.endswith(suf) and len(token) - len(suf) >= 2:
+                token = token[: -len(suf)]
+                break
+        return token[:4]
+    for suf in _EN_SUFFIXES:
+        if token.endswith(suf) and len(token) - len(suf) >= 4:
+            return token[: -len(suf)]
+    return token
+
+
+def match_tokens(text: str) -> set[str]:
+    return {stem(t) for t in tokens(text)}
+
+
 def sentences(text: str) -> list[str]:
     parts = [s.strip() for s in _SENTENCE_SPLIT.split(text) if s and s.strip()]
     return [re.sub(r"\s+", " ", p) for p in parts if len(p) >= 12]
@@ -60,7 +86,7 @@ def hash_embed(text: str, dims: int = EMBED_DIMENSIONS) -> list[float]:
 
 
 def overlap_score(query_tokens: set[str], text: str) -> float:
-    t = set(tokens(text))
+    t = match_tokens(text)
     if not t or not query_tokens:
         return 0.0
     inter = len(query_tokens & t)

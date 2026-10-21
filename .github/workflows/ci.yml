@@ -1,0 +1,99 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ai-service:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: services/ai
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          version: "0.11.28"
+      - run: uv sync --frozen
+      - run: uv run ruff check app tests evals
+      - run: uv run pytest -q
+      - name: Evaluation suite (extractive provider, no API cost)
+        run: AI_PROVIDER=extractive uv run python -m evals.run
+      - uses: actions/upload-artifact@v4
+        with:
+          name: eval-results
+          path: services/ai/evals/results/
+
+  web:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: pgvector/pgvector:pg16
+        env:
+          POSTGRES_USER: digitsnepal
+          POSTGRES_PASSWORD: digitsnepal_dev
+          POSTGRES_DB: digitsnepal
+        ports: ["5433:5432"]
+        options: >-
+          --health-cmd "pg_isready -U digitsnepal" --health-interval 5s --health-retries 10
+    env:
+      DATABASE_URL: postgres://digitsnepal:digitsnepal_dev@localhost:5433/digitsnepal
+      TEST_DATABASE_URL: postgres://digitsnepal:digitsnepal_dev@localhost:5433/digitsnepal_test
+      E2E_DATABASE_URL: postgres://digitsnepal:digitsnepal_dev@localhost:5433/digitsnepal_e2e
+      BETTER_AUTH_SECRET: ci-secret-0123456789-0123456789-abcdef
+      BETTER_AUTH_URL: http://localhost:3000
+      AI_SERVICE_TOKEN: dev-ai-token
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+      - uses: astral-sh/setup-uv@v6
+        with:
+          version: "0.11.28"
+      - run: pnpm install --frozen-lockfile
+      - run: (cd services/ai && uv sync --frozen)
+      - name: Create test databases
+        run: |
+          for db in digitsnepal_test digitsnepal_e2e; do
+            PGPASSWORD=digitsnepal_dev psql -h localhost -p 5433 -U digitsnepal -c "CREATE DATABASE $db"
+          done
+      - name: Migrate
+        working-directory: apps/web
+        run: |
+          pnpm db:migrate
+          DATABASE_URL=$TEST_DATABASE_URL pnpm db:migrate
+          DATABASE_URL=$E2E_DATABASE_URL pnpm db:migrate
+      - name: Lint and typecheck
+        working-directory: apps/web
+        run: pnpm lint && pnpm typecheck
+      - name: Start AI service for integration tests
+        run: (cd services/ai && AI_PROVIDER=extractive nohup uv run uvicorn app.main:app --port 8100 > /tmp/ai.log 2>&1 &) && sleep 3
+      - name: Unit and integration tests
+        working-directory: apps/web
+        run: pnpm test
+      - name: Build
+        working-directory: apps/web
+        run: pnpm build
+      - name: Install Playwright browsers
+        working-directory: apps/web
+        run: pnpm exec playwright install --with-deps chromium
+      - name: End-to-end tests (Playwright)
+        working-directory: apps/web
+        run: pnpm e2e
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: playwright-report
+          path: apps/web/playwright-report/

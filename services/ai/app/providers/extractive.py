@@ -34,10 +34,10 @@ from ..text import (
     estimate_tokens,
     hash_embed,
     key_terms,
+    match_tokens,
     overlap_score,
     sentences,
     stable_int,
-    tokens,
 )
 
 PROVIDER = "extractive"
@@ -89,7 +89,11 @@ def _usage(started: float, text_in: str, text_out: str) -> Usage:
 
 
 def _safe_sentences(src: Source) -> list[str]:
-    return [s for s in sentences(src.content) if not looks_like_injection(s) and len(s) <= 500]
+    # A source containing instruction-like text is treated as tainted as a whole: the claims around an
+    # injection attempt are as untrustworthy as the injection itself.
+    if looks_like_injection(src.content):
+        return []
+    return [s for s in sentences(src.content) if len(s) <= 500]
 
 
 def embed(req: EmbedRequest) -> EmbedResponse:
@@ -155,11 +159,14 @@ def outline(req: OutlineRequest) -> OutlineResponse:
 
 
 def _rank(sources: list[Source], query: str) -> list[tuple[float, str, Source]]:
-    q = set(tokens(query))
+    q = match_tokens(query)
+    # Longer questions must share at least two content words with a sentence to count as a match.
+    min_shared = 2 if len(q) >= 3 else 1
     ranked = []
     for src in sources:
         for sent in _safe_sentences(src):
-            ranked.append((overlap_score(q, sent), sent, src))
+            shared = len(q & match_tokens(sent))
+            ranked.append((overlap_score(q, sent) if shared >= min_shared else 0.0, sent, src))
     ranked.sort(key=lambda r: r[0], reverse=True)
     return ranked
 

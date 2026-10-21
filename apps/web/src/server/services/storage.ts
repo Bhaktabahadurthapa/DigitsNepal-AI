@@ -60,7 +60,7 @@ export function storage(): Storage {
     instance =
       process.env.STORAGE_DRIVER === "s3"
         ? new S3Storage()
-        : new LocalStorage(path.resolve(process.env.STORAGE_LOCAL_DIR ?? "./.storage"));
+        : new LocalStorage(path.resolve(/*turbopackIgnore: true*/ process.env.STORAGE_LOCAL_DIR ?? "./.storage"));
   }
   return instance;
 }

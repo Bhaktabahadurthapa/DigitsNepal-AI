@@ -12,7 +12,7 @@ export function TabsTrigger({ className, ...p }: React.ComponentProps<typeof T.T
   return (
     <T.Trigger
       className={cn(
-        "min-h-9 rounded-md px-3 text-sm font-medium text-muted data-[state=active]:bg-surface data-[state=active]:text-ink data-[state=active]:shadow-sm cursor-pointer",
+        "min-h-9 rounded-md px-3 text-sm font-medium text-slate-600 data-[state=active]:bg-surface data-[state=active]:text-ink data-[state=active]:shadow-sm cursor-pointer",
         className,
       )}
       {...p}

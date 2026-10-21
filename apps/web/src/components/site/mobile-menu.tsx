@@ -15,7 +15,6 @@ export function MobileMenu({ links, signedIn }: { links: { href: string; label: 
   const panelRef = useRef<HTMLDivElement>(null);
   const buttonRef = useRef<HTMLButtonElement>(null);
 
-  useEffect(() => setOpen(false), [pathname]);
   useEffect(() => {
     if (!open) return;
     panelRef.current?.querySelector<HTMLElement>("a,button")?.focus();
@@ -43,7 +42,7 @@ export function MobileMenu({ links, signedIn }: { links: { href: string; label: 
         {open ? <X className="size-6!" /> : <Menu className="size-6!" />}
       </Button>
       {open && (
-        <div ref={panelRef} id="mobile-menu" className="absolute inset-x-0 top-full z-40 border-b border-line bg-surface px-4 pb-6 pt-2 shadow-lg">
+        <div ref={panelRef} id="mobile-menu" onClickCapture={(e) => (e.target as HTMLElement).closest("a") && setOpen(false)} className="absolute inset-x-0 top-full z-40 border-b border-line bg-surface px-4 pb-6 pt-2 shadow-lg">
           <nav aria-label={t.nav.main}>
             <ul className="divide-y divide-line">
               {links.map((l) => (

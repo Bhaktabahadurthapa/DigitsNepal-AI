@@ -1,0 +1,182 @@
+[
+ {
+  "id": "ne-01",
+  "language": "ne",
+  "question": "कृत्रिम बौद्धिकता भनेको के हो?",
+  "expected_source": "ne-ai",
+  "expected_keywords": [
+   "कम्प्युटर प्रणाली"
+  ]
+ },
+ {
+  "id": "ne-02",
+  "language": "ne",
+  "question": "साँघुरो एआईले के गर्छ?",
+  "expected_source": "ne-ai",
+  "expected_keywords": [
+   "एउटा काम"
+  ]
+ },
+ {
+  "id": "ne-03",
+  "language": "ne",
+  "question": "एआईको क्षेत्र के बनाउने हो?",
+  "expected_source": "ne-ai",
+  "expected_keywords": [
+   "कम्प्युटर"
+  ]
+ },
+ {
+  "id": "ne-04",
+  "language": "ne",
+  "question": "मेसिन लर्निङमा कम्प्युटरले केबाट सिक्छ?",
+  "expected_source": "ne-ml",
+  "expected_keywords": [
+   "तालिम डाटा"
+  ]
+ },
+ {
+  "id": "ne-05",
+  "language": "ne",
+  "question": "सुपरभाइज्ड लर्निङ भनेको के हो?",
+  "expected_source": "ne-ml",
+  "expected_keywords": [
+   "लेबल"
+  ]
+ },
+ {
+  "id": "ne-06",
+  "language": "ne",
+  "question": "तालिम डाटा भनेको के हो?",
+  "expected_source": "ne-ml",
+  "expected_keywords": [
+   "उदाहरण"
+  ]
+ },
+ {
+  "id": "ne-07",
+  "language": "ne",
+  "question": "सौर्य ऊर्जा कहाँबाट आउँछ?",
+  "expected_source": "ne-solar",
+  "expected_keywords": [
+   "सूर्यको प्रकाश"
+  ]
+ },
+ {
+  "id": "ne-08",
+  "language": "ne",
+  "question": "सोलार प्यानलले घामलाई केमा बदल्छ?",
+  "expected_source": "ne-solar",
+  "expected_keywords": [
+   "बिजुली"
+  ]
+ },
+ {
+  "id": "ne-09",
+  "language": "ne",
+  "question": "सोलार प्यानलमा कुन सेल हुन्छ?",
+  "expected_source": "ne-solar",
+  "expected_keywords": [
+   "फोटोभोल्टिक"
+  ]
+ },
+ {
+  "id": "ne-10",
+  "language": "ne",
+  "question": "रातिका लागि ऊर्जा कसले सञ्चय गर्छ?",
+  "expected_source": "ne-solar",
+  "expected_keywords": [
+   "ब्याट्री"
+  ]
+ },
+ {
+  "id": "ne-11",
+  "language": "ne",
+  "question": "ओटीपी कसलाई दिने?",
+  "expected_source": "ne-safety",
+  "expected_keywords": [
+   "नदिनुहोस्"
+  ]
+ },
+ {
+  "id": "ne-12",
+  "language": "ne",
+  "question": "के बैंकले फोनमा ओटीपी माग्छ?",
+  "expected_source": "ne-safety",
+  "expected_keywords": [
+   "माग्दैन"
+  ]
+ },
+ {
+  "id": "ne-13",
+  "language": "ne",
+  "question": "ठगीको सन्देश कस्तो हुन्छ?",
+  "expected_source": "ne-safety",
+  "expected_keywords": [
+   "हतार"
+  ]
+ },
+ {
+  "id": "ne-14",
+  "language": "ne",
+  "question": "पैसा माग्ने सन्देश के हुन सक्छ?",
+  "expected_source": "ne-safety",
+  "expected_keywords": [
+   "ठगी"
+  ]
+ },
+ {
+  "id": "ne-15",
+  "language": "ne",
+  "question": "हात कहिले धुने?",
+  "expected_source": "ne-health",
+  "expected_keywords": [
+   "खाना खानुअघि"
+  ]
+ },
+ {
+  "id": "ne-16",
+  "language": "ne",
+  "question": "हात कति समय धुने?",
+  "expected_source": "ne-health",
+  "expected_keywords": [
+   "२० सेकेन्ड"
+  ]
+ },
+ {
+  "id": "ne-17",
+  "language": "ne",
+  "question": "हात केले धुने?",
+  "expected_source": "ne-health",
+  "expected_keywords": [
+   "साबुन"
+  ]
+ },
+ {
+  "id": "ne-18",
+  "language": "ne",
+  "question": "हात धोएपछि के गर्ने?",
+  "expected_source": "ne-health",
+  "expected_keywords": [
+   "पुछ्नुहोस्"
+  ]
+ },
+ {
+  "id": "ne-19",
+  "language": "ne",
+  "question": "शौचालय प्रयोगपछि के गर्नुपर्छ?",
+  "expected_source": "ne-health",
+  "expected_keywords": [
+   "हात धुनुहोस्"
+  ]
+ },
+ {
+  "id": "ne-20",
+  "language": "ne",
+  "question": "पिन कसैलाई दिनुहुन्छ?",
+  "expected_source": "ne-safety",
+  "expected_keywords": [
+   "पिन"
+  ]
+ }
+]

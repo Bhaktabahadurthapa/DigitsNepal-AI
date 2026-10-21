@@ -1,6 +1,8 @@
 import type { NextConfig } from "next";
 
 const isDev = process.env.NODE_ENV !== "production";
+// HTTPS-only headers are on for every production build except local HTTP test builds (E2E).
+const httpsOnly = !isDev && process.env.DISABLE_HTTPS_HEADERS !== "1";
 
 // Strict CSP. Next.js needs 'unsafe-inline' for its inline bootstrap scripts unless nonces are
 // used; 'unsafe-eval' is only needed by the dev server. No third-party script origins are allowed.
@@ -15,7 +17,7 @@ const csp = [
   "base-uri 'self'",
   "form-action 'self'",
   "object-src 'none'",
-  ...(isDev ? [] : ["upgrade-insecure-requests"]),
+  ...(httpsOnly ? ["upgrade-insecure-requests"] : []),
 ].join("; ");
 
 const securityHeaders = [
@@ -25,7 +27,7 @@ const securityHeaders = [
   { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
   { key: "Permissions-Policy", value: "camera=(), microphone=(), geolocation=(), payment=()" },
   { key: "Cross-Origin-Opener-Policy", value: "same-origin" },
-  ...(isDev ? [] : [{ key: "Strict-Transport-Security", value: "max-age=63072000; includeSubDomains; preload" }]),
+  ...(httpsOnly ? [{ key: "Strict-Transport-Security", value: "max-age=63072000; includeSubDomains; preload" }] : []),
 ];
 
 const nextConfig: NextConfig = {
@@ -33,6 +35,7 @@ const nextConfig: NextConfig = {
   // rather than Cache Components / partial prefetching (see docs/architecture.md).
   cacheComponents: false,
   poweredByHeader: false,
+  distDir: process.env.NEXT_DIST_DIR || ".next",
   serverExternalPackages: ["pg", "unpdf", "mammoth", "isomorphic-dompurify", "jsdom"],
   turbopack: {
     rules: {

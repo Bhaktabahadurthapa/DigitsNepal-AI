@@ -24,13 +24,12 @@ export function CompleteLesson({ courseId, lessonId, completed }: { courseId: st
   const [busy, setBusy] = useState(false);
 
   useEffect(() => {
-    setReachedEnd(false);
     const el = ref.current;
     if (!el) return;
     const io = new IntersectionObserver((entries) => entries.some((e) => e.isIntersecting) && setReachedEnd(true), { threshold: 0.5 });
     io.observe(el);
     return () => io.disconnect();
-  }, [lessonId]);
+  }, []);
 
   if (completed)
     return (

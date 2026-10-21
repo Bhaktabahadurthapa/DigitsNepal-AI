@@ -7,7 +7,8 @@ import { sendEmail } from "@/server/email";
 import { log } from "@/server/log";
 
 const secret = process.env.BETTER_AUTH_SECRET;
-if (process.env.NODE_ENV === "production" && (!secret || secret.startsWith("dev-only"))) {
+// Enforced when the production server starts (skipped while `next build` collects page data).
+if (process.env.NODE_ENV === "production" && process.env.NEXT_PHASE !== "phase-production-build" && (!secret || secret.startsWith("dev-only"))) {
   throw new Error("BETTER_AUTH_SECRET must be set to a strong random value in production");
 }
 
@@ -64,7 +65,7 @@ export const auth = betterAuth({
   },
   telemetry: { enabled: false },
   advanced: {
-    useSecureCookies: process.env.NODE_ENV === "production",
+    useSecureCookies: (process.env.BETTER_AUTH_URL ?? "").startsWith("https://"),
     database: { generateId: () => crypto.randomUUID() },
   },
   databaseHooks: {

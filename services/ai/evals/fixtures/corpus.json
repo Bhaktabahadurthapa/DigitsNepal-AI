@@ -1,0 +1,21 @@
+{
+  "en": [
+    {"id": "en-ai", "filename": "ai-basics.md", "heading": "What is AI", "content": "Artificial intelligence is the field of building computer systems that perform tasks that normally need human intelligence. Narrow AI is good at one specific task. General AI, which could do any intellectual task a person can, does not exist today."},
+    {"id": "en-ml", "filename": "ai-basics.md", "heading": "Machine learning", "content": "Machine learning is a way of building AI where the computer learns patterns from examples called training data. A model is the pattern learned from data. Supervised learning uses labelled examples, where people provide the correct answers."},
+    {"id": "en-data", "filename": "ai-basics.md", "heading": "Data quality", "content": "Biased training data can produce unfair predictions. If a speech system is trained mostly on city speakers, it may work poorly for rural speakers. Datasets should be reviewed for missing groups."},
+    {"id": "en-llm", "filename": "llm-guide.md", "heading": "Language models", "content": "A large language model predicts the next word in a sequence of text. It is trained on very large text collections. Language models can produce fluent text that is false; this is called a hallucination."},
+    {"id": "en-prompt", "filename": "llm-guide.md", "heading": "Prompts", "content": "A prompt is the instruction given to a language model. A clear prompt states the task, the audience, any constraints such as length, and the format of the answer. Giving an example of the desired output often improves results."},
+    {"id": "en-agent", "filename": "agents.md", "heading": "AI agents", "content": "An AI agent is a system that uses a language model to decide which actions or tools to use to reach a goal. Tools can include search, calculators or databases. Agents that take consequential actions should require human approval."},
+    {"id": "en-rag", "filename": "agents.md", "heading": "Retrieval", "content": "Retrieval-augmented generation, or RAG, first searches approved documents for relevant passages and then asks the model to answer using those passages. RAG helps reduce hallucinations and lets answers cite their sources."},
+    {"id": "en-privacy", "filename": "safety.md", "heading": "Privacy", "content": "Do not paste passwords, citizenship numbers, or students' names together with their grades into public AI tools. Many AI services may store the prompts that users send."},
+    {"id": "en-scam", "filename": "safety.md", "heading": "Scams", "content": "Scam messages often create urgency and ask for OTP codes, PINs or payments. Banks and digital wallets will not ask for your OTP by phone. A deepfake is audio or video created or changed with AI to show something that did not happen."},
+    {"id": "en-eval", "filename": "agents.md", "heading": "Evaluation", "content": "An evaluation is a set of test questions with expected answers used to measure an AI system. Evaluations should include difficult and adversarial cases and should be repeated after every change."}
+  ],
+  "ne": [
+    {"id": "ne-ai", "filename": "ai-nepali.md", "heading": "एआई", "content": "कृत्रिम बौद्धिकता भनेको सामान्यतया मानिसको बुद्धि चाहिने काम गर्न सक्ने कम्प्युटर प्रणाली बनाउने क्षेत्र हो। साँघुरो एआईले एउटा काम मात्र राम्रोसँग गर्छ।"},
+    {"id": "ne-ml", "filename": "ai-nepali.md", "heading": "मेसिन लर्निङ", "content": "मेसिन लर्निङमा कम्प्युटरले तालिम डाटा भनिने उदाहरणहरूबाट ढाँचा सिक्छ। लेबल गरिएका उदाहरण प्रयोग गर्ने तरिकालाई सुपरभाइज्ड लर्निङ भनिन्छ।"},
+    {"id": "ne-solar", "filename": "urja.md", "heading": "सौर्य ऊर्जा", "content": "सौर्य ऊर्जा सूर्यको प्रकाशबाट आउने ऊर्जा हो। सोलार प्यानलले फोटोभोल्टिक सेलको मद्दतले घामलाई बिजुलीमा बदल्छ। ब्याट्रीले रातिका लागि ऊर्जा सञ्चय गर्छ।"},
+    {"id": "ne-safety", "filename": "surakshya.md", "heading": "डिजिटल सुरक्षा", "content": "ओटीपी वा पिन कसैलाई पनि नदिनुहोस्। बैंकले फोनमा ओटीपी माग्दैन। हतार गराउने र पैसा माग्ने सन्देश प्रायः ठगी हुन्छ।"},
+    {"id": "ne-health", "filename": "swasthya.md", "heading": "हात धुने", "content": "खाना खानुअघि र शौचालय प्रयोगपछि साबुन र सफा पानीले कम्तीमा २० सेकेन्ड हात धुनुहोस्। हात धोएपछि सफा कपडाले पुछ्नुहोस्।"}
+  ]
+}

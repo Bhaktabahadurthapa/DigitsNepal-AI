@@ -39,7 +39,7 @@ export default async function HomePage() {
             <h1 className="text-4xl font-bold leading-tight tracking-tight sm:text-5xl">{t.home.heroTitle}</h1>
             <p className="mt-5 max-w-xl text-lg text-slate-300">{t.home.heroSubtitle}</p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <Button asChild size="lg" variant="primary" className="bg-teal hover:bg-teal-700">
+              <Button asChild size="lg" variant="primary">
                 <Link href="/academy">
                   {t.home.ctaStart} <ArrowRight aria-hidden />
                 </Link>

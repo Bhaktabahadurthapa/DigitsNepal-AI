@@ -25,7 +25,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { authClient } from "@/lib/auth-client";
@@ -55,7 +55,7 @@ export function NavLinks({ items, label }: { items: NavItem[]; label: string }) 
               >
                 <Icon className="size-4" aria-hidden />
                 <span className="flex-1">{i.label}</span>
-                {i.soon && <span className="rounded bg-slate-100 px-1.5 text-[10px] uppercase text-muted">soon</span>}
+                {i.soon && <span className="rounded bg-slate-100 px-1.5 text-[10px] uppercase text-slate-600">soon</span>}
               </Link>
             </li>
           );
@@ -67,14 +67,15 @@ export function NavLinks({ items, label }: { items: NavItem[]; label: string }) 
 
 export function SidebarDrawer({ label, children }: { label: string; children: React.ReactNode }) {
   const [open, setOpen] = useState(false);
-  const path = usePathname();
-  useEffect(() => setOpen(false), [path]);
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
         <Button variant="ghost" size="icon" className="lg:hidden" aria-label={label}><Menu className="size-6!" /></Button>
       </DialogTrigger>
-      <DialogContent title={label} side="left">{children}</DialogContent>
+      <DialogContent title={label} side="left">
+        {/* Close the drawer when a link inside it is followed. */}
+        <div onClickCapture={(e) => (e.target as HTMLElement).closest("a") && setOpen(false)}>{children}</div>
+      </DialogContent>
     </Dialog>
   );
 }

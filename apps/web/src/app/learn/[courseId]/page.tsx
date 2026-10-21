@@ -110,7 +110,7 @@ export default async function LearnPage({ params, searchParams }: Props) {
               </section>
             )}
             {lesson.flashcards.length > 0 && <Flashcards cards={lesson.flashcards} />}
-            <CompleteLesson courseId={courseId} lessonId={lesson.id} completed={done.has(lesson.id)} />
+            <CompleteLesson key={lesson.id} courseId={courseId} lessonId={lesson.id} completed={done.has(lesson.id)} />
             {lesson.quiz && (
               <QuizPanel
                 courseId={courseId}

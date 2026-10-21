@@ -32,7 +32,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
       <body className="min-h-dvh antialiased">
         <I18nProvider value={{ locale, t }}>
           {children}
-          <Toaster position="top-center" richColors closeButton />
+          <Toaster position="top-center" closeButton />
         </I18nProvider>
       </body>
     </html>

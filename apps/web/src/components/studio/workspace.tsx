@@ -107,7 +107,7 @@ export function StudioWorkspace(props: Props) {
       </div>
       <ol className="flex flex-wrap gap-2" aria-label="Course creation steps">
         {STEPS.map((s, i) => (
-          <li key={s} aria-current={i + 1 === step ? "step" : undefined} className={cn("flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-medium", i + 1 < step ? "bg-green-50 text-green" : i + 1 === step ? "bg-navy text-white" : "bg-slate-100 text-muted")}>
+          <li key={s} aria-current={i + 1 === step ? "step" : undefined} className={cn("flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-medium", i + 1 < step ? "bg-green-50 text-green" : i + 1 === step ? "bg-navy text-white" : "bg-slate-100 text-slate-600")}>
             {i + 1 < step ? <Check className="size-3" aria-hidden /> : <span aria-hidden>{i + 1}</span>} {s}
           </li>
         ))}
@@ -311,7 +311,6 @@ function OutlineEditor({ courseId, outline }: { courseId: string; outline: Outli
 }
 
 function Editor({ course, modules, previews, versions }: Props) {
-  const router = useRouter();
   const lessons = useMemo(() => modules.flatMap((m) => m.lessons), [modules]);
   const [selected, setSelected] = useState(lessons[0]?.id);
   const lesson = lessons.find((l) => l.id === selected) ?? lessons[0];

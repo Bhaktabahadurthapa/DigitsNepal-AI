@@ -1,0 +1,118 @@
+[
+ {
+  "id": "cit-01",
+  "task": "lesson",
+  "lesson_title": "What is AI",
+  "objectives": [
+   "Define artificial intelligence"
+  ],
+  "sources": [
+   "en-ai",
+   "en-ml"
+  ]
+ },
+ {
+  "id": "cit-02",
+  "task": "lesson",
+  "lesson_title": "Machine learning basics",
+  "objectives": [
+   "Explain training data"
+  ],
+  "sources": [
+   "en-ml",
+   "en-data"
+  ]
+ },
+ {
+  "id": "cit-03",
+  "task": "lesson",
+  "lesson_title": "Bias in data",
+  "objectives": [
+   "Explain bias"
+  ],
+  "sources": [
+   "en-data"
+  ]
+ },
+ {
+  "id": "cit-04",
+  "task": "lesson",
+  "lesson_title": "Language models",
+  "objectives": [
+   "Explain hallucinations"
+  ],
+  "sources": [
+   "en-llm",
+   "en-prompt"
+  ]
+ },
+ {
+  "id": "cit-05",
+  "task": "lesson",
+  "lesson_title": "Writing prompts",
+  "objectives": [
+   "Write clear prompts"
+  ],
+  "sources": [
+   "en-prompt"
+  ]
+ },
+ {
+  "id": "cit-06",
+  "task": "lesson",
+  "lesson_title": "AI agents",
+  "objectives": [
+   "Describe agents and tools"
+  ],
+  "sources": [
+   "en-agent",
+   "en-rag"
+  ]
+ },
+ {
+  "id": "cit-07",
+  "task": "lesson",
+  "lesson_title": "Retrieval",
+  "objectives": [
+   "Explain RAG"
+  ],
+  "sources": [
+   "en-rag"
+  ]
+ },
+ {
+  "id": "cit-08",
+  "task": "lesson",
+  "lesson_title": "Staying safe",
+  "objectives": [
+   "Protect privacy"
+  ],
+  "sources": [
+   "en-privacy",
+   "en-scam"
+  ]
+ },
+ {
+  "id": "cit-09",
+  "task": "lesson",
+  "lesson_title": "सौर्य ऊर्जा",
+  "objectives": [
+   "सोलार प्यानल बुझ्ने"
+  ],
+  "sources": [
+   "ne-solar"
+  ]
+ },
+ {
+  "id": "cit-10",
+  "task": "lesson",
+  "lesson_title": "डिजिटल सुरक्षा",
+  "objectives": [
+   "ठगी चिन्ने"
+  ],
+  "sources": [
+   "ne-safety",
+   "ne-health"
+  ]
+ }
+]

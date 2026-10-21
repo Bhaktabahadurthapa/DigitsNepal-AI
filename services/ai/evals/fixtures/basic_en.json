@@ -1,0 +1,182 @@
+[
+ {
+  "id": "en-01",
+  "language": "en",
+  "question": "What is artificial intelligence?",
+  "expected_source": "en-ai",
+  "expected_keywords": [
+   "computer systems"
+  ]
+ },
+ {
+  "id": "en-02",
+  "language": "en",
+  "question": "What is narrow AI?",
+  "expected_source": "en-ai",
+  "expected_keywords": [
+   "one specific task"
+  ]
+ },
+ {
+  "id": "en-03",
+  "language": "en",
+  "question": "Does general AI exist today?",
+  "expected_source": "en-ai",
+  "expected_keywords": [
+   "does not exist"
+  ]
+ },
+ {
+  "id": "en-04",
+  "language": "en",
+  "question": "What is training data?",
+  "expected_source": "en-ml",
+  "expected_keywords": [
+   "examples"
+  ]
+ },
+ {
+  "id": "en-05",
+  "language": "en",
+  "question": "What is a model in machine learning?",
+  "expected_source": "en-ml",
+  "expected_keywords": [
+   "pattern"
+  ]
+ },
+ {
+  "id": "en-06",
+  "language": "en",
+  "question": "What is supervised learning?",
+  "expected_source": "en-ml",
+  "expected_keywords": [
+   "labelled"
+  ]
+ },
+ {
+  "id": "en-07",
+  "language": "en",
+  "question": "What can biased training data cause?",
+  "expected_source": "en-data",
+  "expected_keywords": [
+   "unfair"
+  ]
+ },
+ {
+  "id": "en-08",
+  "language": "en",
+  "question": "Why might a speech system work poorly for rural speakers?",
+  "expected_source": "en-data",
+  "expected_keywords": [
+   "city speakers"
+  ]
+ },
+ {
+  "id": "en-09",
+  "language": "en",
+  "question": "What does a large language model predict?",
+  "expected_source": "en-llm",
+  "expected_keywords": [
+   "next word"
+  ]
+ },
+ {
+  "id": "en-10",
+  "language": "en",
+  "question": "What is a hallucination in language models?",
+  "expected_source": "en-llm",
+  "expected_keywords": [
+   "false"
+  ]
+ },
+ {
+  "id": "en-11",
+  "language": "en",
+  "question": "What is a prompt?",
+  "expected_source": "en-prompt",
+  "expected_keywords": [
+   "instruction"
+  ]
+ },
+ {
+  "id": "en-12",
+  "language": "en",
+  "question": "What should a clear prompt state?",
+  "expected_source": "en-prompt",
+  "expected_keywords": [
+   "task"
+  ]
+ },
+ {
+  "id": "en-13",
+  "language": "en",
+  "question": "What often improves prompt results?",
+  "expected_source": "en-prompt",
+  "expected_keywords": [
+   "example"
+  ]
+ },
+ {
+  "id": "en-14",
+  "language": "en",
+  "question": "What is an AI agent?",
+  "expected_source": "en-agent",
+  "expected_keywords": [
+   "tools"
+  ]
+ },
+ {
+  "id": "en-15",
+  "language": "en",
+  "question": "Which agents should require human approval?",
+  "expected_source": "en-agent",
+  "expected_keywords": [
+   "consequential"
+  ]
+ },
+ {
+  "id": "en-16",
+  "language": "en",
+  "question": "What is retrieval-augmented generation?",
+  "expected_source": "en-rag",
+  "expected_keywords": [
+   "approved documents"
+  ]
+ },
+ {
+  "id": "en-17",
+  "language": "en",
+  "question": "How does RAG help reduce hallucinations?",
+  "expected_source": "en-rag",
+  "expected_keywords": [
+   "passages"
+  ]
+ },
+ {
+  "id": "en-18",
+  "language": "en",
+  "question": "What should you not paste into public AI tools?",
+  "expected_source": "en-privacy",
+  "expected_keywords": [
+   "passwords"
+  ]
+ },
+ {
+  "id": "en-19",
+  "language": "en",
+  "question": "Will a bank ask for your OTP by phone?",
+  "expected_source": "en-scam",
+  "expected_keywords": [
+   "will not"
+  ]
+ },
+ {
+  "id": "en-20",
+  "language": "en",
+  "question": "What is an evaluation of an AI system?",
+  "expected_source": "en-eval",
+  "expected_keywords": [
+   "test questions"
+  ]
+ }
+]

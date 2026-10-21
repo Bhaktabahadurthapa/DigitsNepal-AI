@@ -3,7 +3,7 @@ import type { Viewer } from "@/server/authz";
 import { db, schema } from "@/server/db";
 import type { Citation } from "@/server/db/schema";
 import { HttpError } from "@/server/errors";
-import { canEditCourse, loadCourse } from "./access";
+import { canEditCourse, canViewPublishedCourse, loadCourse } from "./access";
 import { ai, AiServiceError, type AiSource } from "./ai-client";
 import { guardTutor, LimitError, recordUsage } from "./ai-guard";
 import { getPlayer, hasOpenQuiz } from "./learning";
@@ -32,8 +32,13 @@ export async function askTutor(
 
   const course = await loadCourse(input.courseId);
   const player = await getPlayer(v, input.courseId);
-  if (!player && !(await canEditCourse(v, course))) throw new HttpError(404, "course_not_found");
-  if (!player) throw new HttpError(403, "enroll_required", "Enroll in the course to use its tutor.");
+  if (!player) {
+    // Visible-but-not-enrolled gets a helpful 403; anything the viewer cannot see stays a 404.
+    if ((await canViewPublishedCourse(v, course)) || (await canEditCourse(v, course))) {
+      throw new HttpError(403, "enroll_required", "Enroll in the course to use its tutor.");
+    }
+    throw new HttpError(404, "course_not_found");
+  }
   if (await hasOpenQuiz(v.id, input.courseId)) throw new HttpError(423, "quiz_in_progress");
 
   let guard;

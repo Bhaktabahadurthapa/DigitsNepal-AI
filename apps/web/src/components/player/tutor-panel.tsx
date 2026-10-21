@@ -53,7 +53,10 @@ function TutorChat({ courseId, lessonId, defaultLanguage, history }: { courseId:
   const [quizActive, setQuizActive] = useState(false);
   const endRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => endRef.current?.scrollIntoView({ block: "end" }), [messages]);
+  useEffect(() => {
+    // Braces matter: newer browsers return a Promise from scrollIntoView, which React would treat as a cleanup.
+    void endRef.current?.scrollIntoView({ block: "end" });
+  }, [messages]);
   useEffect(() => {
     const on = (e: Event) => setQuizActive((e as CustomEvent).detail.active);
     window.addEventListener("dn:quiz", on);
