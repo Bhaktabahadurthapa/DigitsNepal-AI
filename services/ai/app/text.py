@@ -93,7 +93,7 @@ def overlap_score(query_tokens: set[str], text: str) -> float:
     return inter / math.sqrt(len(query_tokens) * len(t))
 
 
-def key_terms(texts: list[str], k: int = 8) -> list[str]:
+def key_terms(texts: list[str], k: int = 8, min_count: int = 1) -> list[str]:
     """Most distinctive multi-occurrence terms across texts (simple tf * log idf)."""
     df: dict[str, int] = {}
     tf: dict[str, int] = {}
@@ -105,7 +105,7 @@ def key_terms(texts: list[str], k: int = 8) -> list[str]:
             df[w] = df.get(w, 0) + 1
     n = max(1, len(texts))
     scored = sorted(
-        ((tf[w] * math.log(1 + n / df[w]) * (1 if len(w) > 3 else 0.3), w) for w in tf if not w.isdigit()),
+        ((tf[w] * math.log(1 + n / df[w]) * (1 if len(w) > 3 else 0.3), w) for w in tf if not w.isdigit() and tf[w] >= min_count),
         reverse=True,
     )
     return [w for _, w in scored[:k]]

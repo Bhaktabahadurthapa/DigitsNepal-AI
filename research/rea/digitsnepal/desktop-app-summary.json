@@ -1,0 +1,95 @@
+{
+ "evidence_id": "ev_6b7feacc80bb6afa698f50baacd86bd0fe1a49e8f2462753750087583695f3c4",
+ "confidence": "observed",
+ "viewport": {
+  "width": 1440,
+  "height": 900,
+  "device_scale_factor": 1
+ },
+ "start_url": "http://localhost:3000/sign-in",
+ "browser": "Chromium 156.0.8078.4",
+ "steps": [
+  {
+   "step_id": "scenario_start",
+   "url": "http://localhost:3000/sign-in",
+   "status": "completed",
+   "error": null,
+   "screenshot": "desktop-app-scenario_start.png",
+   "screenshot_sha256": "089683936a5de55083ba5953f31e763fa4724defce0a87eebb1c6f5763a998f0"
+  },
+  {
+   "step_id": "email",
+   "url": "http://localhost:3000/sign-in",
+   "status": "completed",
+   "error": null,
+   "screenshot": "desktop-app-email.png",
+   "screenshot_sha256": "be219bffc7eb30ada51643f689cdbed9f9d9a87d585c18f2fe7a2847b83295cf"
+  },
+  {
+   "step_id": "pw",
+   "url": "http://localhost:3000/sign-in",
+   "status": "completed",
+   "error": null,
+   "screenshot": "desktop-app-pw.png",
+   "screenshot_sha256": "730843ec880633b2f643888e83635471a9d8a032af68713b26ce48f036d5d715"
+  },
+  {
+   "step_id": "submit",
+   "url": "http://localhost:3000/sign-in",
+   "status": "completed",
+   "error": null,
+   "screenshot": "desktop-app-submit.png",
+   "screenshot_sha256": "3d2f64f075102b059bb4f752da26cae9625b043fbbb35ff311cb6cae2f93a2fc"
+  },
+  {
+   "step_id": "wait",
+   "url": "http://localhost:3000/dashboard/learner",
+   "status": "completed",
+   "error": null,
+   "screenshot": "desktop-app-wait.png",
+   "screenshot_sha256": "e4fc12545599251ae472c77201f4ce6abe1e6c26f5588ad7604a4f8b7569be24"
+  },
+  {
+   "step_id": "studio",
+   "url": "http://localhost:3000/studio/9a16ebab-17af-4ae3-9bea-c839d251cb21",
+   "status": "completed",
+   "error": null,
+   "screenshot": "desktop-app-studio.png",
+   "screenshot_sha256": "87c1214fac8e09b4c44bc8ab5e52c520aed7c10c0da621f8b3b68c5ab9e40854"
+  },
+  {
+   "step_id": "studio_settle",
+   "url": "http://localhost:3000/studio/9a16ebab-17af-4ae3-9bea-c839d251cb21",
+   "status": "completed",
+   "error": null,
+   "screenshot": "desktop-app-studio_settle.png",
+   "screenshot_sha256": "080945b9644499a6b3362d70c332fb31718857d0a92ab8d0cbc0d06acbeaf4ff"
+  },
+  {
+   "step_id": "preview",
+   "url": "http://localhost:3000/studio/9a16ebab-17af-4ae3-9bea-c839d251cb21",
+   "status": "completed",
+   "error": null,
+   "screenshot": "desktop-app-preview.png",
+   "screenshot_sha256": "ef29958f954577691cf75cb775d177816106ab138d9b18100a8e0caeaf4e008d"
+  },
+  {
+   "step_id": "learn",
+   "url": "http://localhost:3000/academy",
+   "status": "completed",
+   "error": null,
+   "screenshot": "desktop-app-learn.png",
+   "screenshot_sha256": "63594e438a4ac57ebbaf5606e6d08382d6f2b3501325a5a1acf567698cce7e04"
+  },
+  {
+   "step_id": "learn_settle",
+   "url": "http://localhost:3000/academy",
+   "status": "completed",
+   "error": null,
+   "screenshot": "desktop-app-learn_settle.png",
+   "screenshot_sha256": "63594e438a4ac57ebbaf5606e6d08382d6f2b3501325a5a1acf567698cce7e04"
+  }
+ ],
+ "events": [],
+ "completeness": "complete"
+}

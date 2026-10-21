@@ -1,0 +1,127 @@
+{
+ "evidence_id": "ev_1ae62b3840b440ea2eeb09090d94f8cd28a39cd726d63526220c8c4b852dad2a",
+ "confidence": "observed",
+ "viewport": {
+  "width": 390,
+  "height": 844,
+  "device_scale_factor": 1
+ },
+ "start_url": "http://localhost:3000/",
+ "browser": "Chromium 156.0.8078.4",
+ "steps": [
+  {
+   "step_id": "scenario_start",
+   "url": "http://localhost:3000/",
+   "status": "completed",
+   "error": null,
+   "screenshot": "mobile-app-scenario_start.png",
+   "screenshot_sha256": "ea4ea9e0b4b895e7ada51ad13a19bd926a1ea2e57aad56c5f397c06d0c6c48fc"
+  },
+  {
+   "step_id": "s0",
+   "url": "http://localhost:3000/",
+   "status": "completed",
+   "error": null,
+   "screenshot": "mobile-app-s0.png",
+   "screenshot_sha256": "ea4ea9e0b4b895e7ada51ad13a19bd926a1ea2e57aad56c5f397c06d0c6c48fc"
+  },
+  {
+   "step_id": "menu",
+   "url": "http://localhost:3000/",
+   "status": "completed",
+   "error": null,
+   "screenshot": "mobile-app-menu.png",
+   "screenshot_sha256": "e1299bc2fe2f69a18c1fca4b4b1b4654fcb1139b05360a642cb7f8ec4b880471"
+  },
+  {
+   "step_id": "menu_open",
+   "url": "http://localhost:3000/",
+   "status": "completed",
+   "error": null,
+   "screenshot": "mobile-app-menu_open.png",
+   "screenshot_sha256": "e1299bc2fe2f69a18c1fca4b4b1b4654fcb1139b05360a642cb7f8ec4b880471"
+  },
+  {
+   "step_id": "academy",
+   "url": "http://localhost:3000/academy",
+   "status": "completed",
+   "error": null,
+   "screenshot": "mobile-app-academy.png",
+   "screenshot_sha256": "f67b74b24f024cd6413f3179e6adb22d7d2a9b6e97bfc182d5a561ebf311decb"
+  },
+  {
+   "step_id": "course",
+   "url": "http://localhost:3000/academy/introduction-to-ai-nepali",
+   "status": "completed",
+   "error": null,
+   "screenshot": "mobile-app-course.png",
+   "screenshot_sha256": "8c7e4d1e9b2c7b06f75f6e2ee37e245f0b3649a6c610b0c12851dd7cc570e679"
+  },
+  {
+   "step_id": "signin",
+   "url": "http://localhost:3000/sign-in",
+   "status": "completed",
+   "error": null,
+   "screenshot": "mobile-app-signin.png",
+   "screenshot_sha256": "460cab40d48469101b1a982fcbd7c8335c28e13e891f02dcb7b010f76b107833"
+  },
+  {
+   "step_id": "email",
+   "url": "http://localhost:3000/sign-in",
+   "status": "completed",
+   "error": null,
+   "screenshot": "mobile-app-email.png",
+   "screenshot_sha256": "751f740dbfbfe278ebb40c51e8876cfa8ef5a241b3a6679d79a05996cef571d4"
+  },
+  {
+   "step_id": "pw",
+   "url": "http://localhost:3000/sign-in",
+   "status": "completed",
+   "error": null,
+   "screenshot": "mobile-app-pw.png",
+   "screenshot_sha256": "41aef647b2bdbdf74819a2d596c14916b1455f7bad824c9b08db26e0743a97d2"
+  },
+  {
+   "step_id": "submit",
+   "url": "http://localhost:3000/sign-in",
+   "status": "completed",
+   "error": null,
+   "screenshot": "mobile-app-submit.png",
+   "screenshot_sha256": "a5b2ee679b1d149b074e71a25b0b099e03d12da3e33e7da99c91ea9fdd0ab4df"
+  },
+  {
+   "step_id": "dash",
+   "url": "http://localhost:3000/dashboard/learner",
+   "status": "completed",
+   "error": null,
+   "screenshot": "mobile-app-dash.png",
+   "screenshot_sha256": "ab2393f4af69d9e208607085f95f0ef7c1ab94bce17c70becc454d6584e11924"
+  },
+  {
+   "step_id": "learn",
+   "url": "http://localhost:3000/learn/9a16ebab-17af-4ae3-9bea-c839d251cb21",
+   "status": "completed",
+   "error": null,
+   "screenshot": "mobile-app-learn.png",
+   "screenshot_sha256": "3d17706eb3d5cce949908f464f6b9393d3b1b25c1e3f536126460591ffff6251"
+  },
+  {
+   "step_id": "tutor_open",
+   "url": "http://localhost:3000/learn/9a16ebab-17af-4ae3-9bea-c839d251cb21",
+   "status": "completed",
+   "error": null,
+   "screenshot": "mobile-app-tutor_open.png",
+   "screenshot_sha256": "5ddcf509fac38c028a6ef8eac9b48ccb016f432fd2944ee3878f4f9de7c63a53"
+  },
+  {
+   "step_id": "tutor_settle",
+   "url": "http://localhost:3000/learn/9a16ebab-17af-4ae3-9bea-c839d251cb21",
+   "status": "completed",
+   "error": null,
+   "screenshot": "mobile-app-tutor_settle.png",
+   "screenshot_sha256": "5ddcf509fac38c028a6ef8eac9b48ccb016f432fd2944ee3878f4f9de7c63a53"
+  }
+ ],
+ "events": [],
+ "completeness": "complete"
+}

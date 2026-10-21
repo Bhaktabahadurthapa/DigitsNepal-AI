@@ -1,0 +1,39 @@
+{
+ "evidence_id": "ev_b94db9e50617b0098174a0b61bfdcb1c3d11a04b8ee1dd206daaa04177b4a82f",
+ "confidence": "observed",
+ "viewport": {
+  "width": 768,
+  "height": 1024,
+  "device_scale_factor": 1
+ },
+ "start_url": "http://localhost:3000/",
+ "browser": "Chromium 156.0.8078.4",
+ "steps": [
+  {
+   "step_id": "scenario_start",
+   "url": "http://localhost:3000/",
+   "status": "completed",
+   "error": null,
+   "screenshot": "tablet-scenario_start.png",
+   "screenshot_sha256": "63f2312f1d6164e312c4e1402ec280f5b45407d478f516adeae1ff5277bef8d1"
+  },
+  {
+   "step_id": "s0",
+   "url": "http://localhost:3000/",
+   "status": "completed",
+   "error": null,
+   "screenshot": "tablet-s0.png",
+   "screenshot_sha256": "63f2312f1d6164e312c4e1402ec280f5b45407d478f516adeae1ff5277bef8d1"
+  },
+  {
+   "step_id": "academy",
+   "url": "http://localhost:3000/academy",
+   "status": "completed",
+   "error": null,
+   "screenshot": "tablet-academy.png",
+   "screenshot_sha256": "622954475928474ce9cfab886b5b22b08d12ab780dfc3f2deb3a1bc0a8ba8db2"
+  }
+ ],
+ "events": [],
+ "completeness": "complete"
+}

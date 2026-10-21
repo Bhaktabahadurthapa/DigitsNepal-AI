@@ -117,17 +117,22 @@ def outline(req: OutlineRequest) -> OutlineResponse:
     tr = T[req.language]
     srcs = [s for s in req.sources if _safe_sentences(s)] or req.sources
 
-    # Group consecutive chunks that share a heading into one lesson candidate.
+    # Group consecutive chunks that share a heading into one lesson candidate. Very short chunks
+    # (titles, attribution lines) are merged into the following group instead of becoming lessons.
     groups: list[tuple[str, list[Source]]] = []
+    pending: list[Source] = []
     for s in srcs:
+        if len(s.content) < 200 and s is not srcs[-1]:
+            pending.append(s)
+            continue
         title = _title_from(s)
         if groups and s.heading and groups[-1][1][-1].heading == s.heading:
-            groups[-1][1].append(s)
+            groups[-1][1].extend([*pending, s])
         else:
-            groups.append((title, [s]))
+            groups.append((title, [*pending, s]))
+        pending = []
 
-    total_lessons = min(len(groups), req.target_modules * req.lessons_per_module)
-    total_lessons = max(1, total_lessons)
+    total_lessons = max(1, min(len(groups), req.target_modules * req.lessons_per_module))
     # Merge groups evenly into the requested number of lessons.
     per = len(groups) / total_lessons
     lesson_groups = [
@@ -136,11 +141,10 @@ def outline(req: OutlineRequest) -> OutlineResponse:
     lessons: list[OutlineLesson] = []
     for lg in lesson_groups:
         members = [s for _, ss in lg for s in ss]
-        terms = key_terms([m.content for m in members], k=3)
-        objectives = [f"{tr['objective']}: {t}" for t in terms] or [lg[0][0]]
-        lessons.append(
-            OutlineLesson(title=lg[0][0][:200], objectives=objectives, source_ids=[m.id for m in members][:12])
-        )
+        title = lg[0][0]
+        terms = [t for t in key_terms([m.content for m in members], k=4, min_count=2) if t not in title.lower()][:2]
+        objectives = [f"{tr['objective']}: {title}", *(f"{tr['objective']}: {t}" for t in terms)]
+        lessons.append(OutlineLesson(title=title[:200], objectives=objectives, source_ids=[m.id for m in members][:12]))
 
     n_modules = max(1, min(req.target_modules, len(lessons)))
     per_mod = -(-len(lessons) // n_modules)

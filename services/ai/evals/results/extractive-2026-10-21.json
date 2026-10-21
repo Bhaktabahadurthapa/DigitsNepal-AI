@@ -1,7 +1,7 @@
 {
  "provider": "extractive",
  "model": "extractive-v1",
- "date": "2026-10-21T07:19:15+00:00",
+ "date": "2026-10-21T07:21:20+00:00",
  "suites": [
   {
    "suite": "basic_en (20)",
@@ -67,7 +67,7 @@
  ],
  "calls": 140,
  "latency_ms": {
-  "p50": 1.9,
+  "p50": 1.8,
   "p95": 2.3
  },
  "tokens_in": 48194,
