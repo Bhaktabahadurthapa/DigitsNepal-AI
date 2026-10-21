@@ -1,0 +1,49 @@
+{
+ "evidence_id": "ev_49df162e8fa776c34bc64a44c6027fc72ccbfd040e4274ed2a1b861885090ce2",
+ "confidence": "observed",
+ "viewport": {
+  "width": 390,
+  "height": 844,
+  "device_scale_factor": 1
+ },
+ "start_url": "https://honen.com/",
+ "browser": "Chromium 156.0.8078.4",
+ "steps": [
+  {
+   "step_id": "scenario_start",
+   "url": "https://honen.com/",
+   "status": "completed",
+   "error": null,
+   "screenshot": "home-mobile-menu-scenario_start.png",
+   "screenshot_sha256": "79d1477a61cf43f505f5d03c60098fa5972824894decd4eb7d2d1fa7e2e47fa3"
+  },
+  {
+   "step_id": "s0",
+   "url": "https://honen.com/",
+   "status": "completed",
+   "error": null,
+   "screenshot": "home-mobile-menu-s0.png",
+   "screenshot_sha256": "5e6b175fdaeafda8e87733db711c0df9207ed6edd085bdc9e157504f560052c6"
+  },
+  {
+   "step_id": "menu",
+   "url": "https://honen.com/",
+   "status": "completed",
+   "error": null,
+   "screenshot": "home-mobile-menu-menu.png",
+   "screenshot_sha256": "f83ce0ff4f96b2355c17cfe3f13bf0f071366a8f4591ab1858e72680014f75a4"
+  },
+  {
+   "step_id": "menu_settle",
+   "url": "https://honen.com/",
+   "status": "completed",
+   "error": null,
+   "screenshot": "home-mobile-menu-menu_settle.png",
+   "screenshot_sha256": "f83ce0ff4f96b2355c17cfe3f13bf0f071366a8f4591ab1858e72680014f75a4",
+   "a11y": "home-mobile-menu-menu_settle-a11y.txt",
+   "a11y_sha256": "a9fe4ec30d10c704729443804d1b6cd352ffd615d4e1c91d41f8b38709685bb2"
+  }
+ ],
+ "events": [],
+ "completeness": "complete"
+}

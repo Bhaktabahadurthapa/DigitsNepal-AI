@@ -1,0 +1,47 @@
+{
+ "evidence_id": "ev_99c0008842d2de9a58da41b9d6bb794eca87412f0ef680ef54ff3976dcf86994",
+ "confidence": "observed",
+ "viewport": {
+  "width": 1440,
+  "height": 900,
+  "device_scale_factor": 1
+ },
+ "start_url": "https://honen.com/",
+ "browser": "Chromium 156.0.8078.4",
+ "steps": [
+  {
+   "step_id": "scenario_start",
+   "url": "https://honen.com/",
+   "status": "completed",
+   "error": null
+  },
+  {
+   "step_id": "settle",
+   "url": "https://honen.com/",
+   "status": "completed",
+   "error": null,
+   "screenshot": "home-desktop-settle.png",
+   "screenshot_sha256": "92324846bced1c26fea5186eee7660631262b193bf872d7168c03b9c46c01926",
+   "a11y": "home-desktop-settle-a11y.txt",
+   "a11y_sha256": "89fc656248d90e546b7762862dcac3c82b6e225304072d90569f0714a5c21944"
+  }
+ ],
+ "events": [
+  {
+   "kind": "console",
+   "level": "warning",
+   "text": "[analytics] mixpanel-browser not available"
+  },
+  {
+   "kind": "console",
+   "level": "debug",
+   "text": "EmeEncryptionSchemePolyfill: Waiting to detect encryptionScheme support."
+  },
+  {
+   "kind": "console",
+   "level": "debug",
+   "text": "McEncryptionSchemePolyfill: Waiting to detect encryptionScheme support."
+  }
+ ],
+ "completeness": "complete"
+}

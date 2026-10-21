@@ -1,0 +1,85 @@
+{
+ "evidence_id": "ev_54d606fc273b2080fe3f50bf516443828dc990e343bf477f169bf55b0f2b88fd",
+ "confidence": "observed",
+ "viewport": {
+  "width": 390,
+  "height": 844,
+  "device_scale_factor": 1
+ },
+ "start_url": "https://honen.com/",
+ "browser": "Chromium 156.0.8078.4",
+ "steps": [
+  {
+   "step_id": "scenario_start",
+   "url": "https://honen.com/",
+   "status": "completed",
+   "error": null,
+   "screenshot": "home-mobile-scenario_start.png",
+   "screenshot_sha256": "79d1477a61cf43f505f5d03c60098fa5972824894decd4eb7d2d1fa7e2e47fa3"
+  },
+  {
+   "step_id": "s0",
+   "url": "https://honen.com/",
+   "status": "completed",
+   "error": null,
+   "screenshot": "home-mobile-s0.png",
+   "screenshot_sha256": "1b1bb17aa3692fcde5639744dd6fe52e16253658055dab71b0be6e5acaa4875d"
+  },
+  {
+   "step_id": "p1",
+   "url": "https://honen.com/",
+   "status": "completed",
+   "error": null,
+   "screenshot": "home-mobile-p1.png",
+   "screenshot_sha256": "ae810c3a6ca12c62eab00cee2fd49f6efde99c103452b79f16ad0d80bebddb3b"
+  },
+  {
+   "step_id": "p2",
+   "url": "https://honen.com/",
+   "status": "completed",
+   "error": null,
+   "screenshot": "home-mobile-p2.png",
+   "screenshot_sha256": "c453abec98673c970e0947f48cdd98e9b8f9d576c43aae33495402d3c6eb0527"
+  },
+  {
+   "step_id": "p3",
+   "url": "https://honen.com/",
+   "status": "completed",
+   "error": null,
+   "screenshot": "home-mobile-p3.png",
+   "screenshot_sha256": "6660c8dab5e7b9d3753922b70c80dfb62edfddd771184df6ea884d6badd6fdea"
+  },
+  {
+   "step_id": "menu",
+   "url": "https://honen.com/",
+   "status": "failed",
+   "error": "locator.click: Error: strict mode violation: locator('header button[aria-label]') resolved to 5 elements:\n    1) <button dir=\"ltr\" type=\"button\" data-size=\"sm\" role=\"combobox\" data-state=\"closed\" aria-expanded=\"false\" aria-label=\"Language\" aria-autocomplete=\"none\" data-slot=\"select-trigger\" aria-controls=\"radix-_R_5mnavabsnltb_\" class=\"data-[placeholder]:text-muted-foreground [&_svg:not([class*='text-'])]:text-muted-foreground focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive dark:bg-input/30 dark:hover:bg-i\u2026>\u2026</button> aka getByLabel('Language')\n    2) <button type=\"button\" aria-expanded=\"false\" aria-label=\"Open menu\" class=\"shrink-0 p-2 rounded-lg transition hover:bg-scrim/5 text-[var(--marketing-ink)]\">\u2026</button> aka getByRole('button', { name: 'Open menu' })\n    3) <button type=\"button\" data-state=\"closed\" data-slot=\"tooltip-trigger\" aria-label=\"Back to dashboard\" class=\"shrink-0 rounded-lg transition-all duration-150 hover:opacity-80 cursor-pointer active:scale-95\">\u2026</button> aka getByLabel('Back to dashboard')\n    4) <button type=\"button\" data-state=\"closed\" data-tour=\"lesson-plan\" data-slot=\"tooltip-trigger\" aria-label=\"Open lesson plan for Why This Course Is About Making Anything\" class=\"flex items-center rounded-lg transition-all duration-150 flex-1 min-w-0 max-w-[240px] px-2 py-1.5 md:flex-initial md:w-[220px] md:max-w-full md:shrink hover:bg-muted/50 cursor-pointer active:scale-[0.98]\">\u2026</button> aka getByRole('button', { name: 'Open lesson plan for Why This' })\n    5) <button type=\"button\" data-state=\"closed\" aria-label=\"Read \u2014 Learn\" data-slot=\"tooltip-trigger\" class=\"rounded-lg outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2\">\u2026</button> aka getByLabel('Read \u2014 Learn')\n\nCall log:\n\u001b[2m  - waiting for locator('header button[aria-label]')\u001b[22m\n",
+   "screenshot": "home-mobile-menu.png",
+   "screenshot_sha256": "5e563cc5a382e46ded5b8ec4db61398497d8c7b85053d49241331867ef4f6b33"
+  },
+  {
+   "step_id": "menu_settle",
+   "url": "https://honen.com/",
+   "status": "cancelled",
+   "error": "not executed after an earlier action failure"
+  }
+ ],
+ "events": [
+  {
+   "kind": "console",
+   "level": "warning",
+   "text": "[analytics] mixpanel-browser not available"
+  },
+  {
+   "kind": "console",
+   "level": "debug",
+   "text": "EmeEncryptionSchemePolyfill: Waiting to detect encryptionScheme support."
+  },
+  {
+   "kind": "console",
+   "level": "debug",
+   "text": "McEncryptionSchemePolyfill: Waiting to detect encryptionScheme support."
+  }
+ ],
+ "completeness": "incomplete"
+}

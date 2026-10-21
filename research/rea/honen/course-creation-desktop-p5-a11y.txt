@@ -1,0 +1,331 @@
+- document:
+  - link "Skip to main content":
+    - /url: "#main-content"
+  - text: Introducing Honen Governance
+  - link "Read More":
+    - /url: https://honen.com/news/introducing-honen-governance
+  - button "Dismiss announcement"
+  - banner:
+    - navigation "Main navigation":
+      - link "Honen":
+        - /url: /
+        - img "Honen"
+      - button "Features"
+      - button "Solutions"
+      - button "Company"
+      - combobox "Language": English
+      - button "Log in"
+      - link "Book a demo":
+        - /url: /contact
+  - main:
+    - heading "Create and edit complete courses with AI." [level=1]
+    - paragraph: Turn your sources into courses, assessments, and practice. Build with AI, verify the citations, and refine every part in chat.
+    - link "Book a demo":
+      - /url: /contact
+    - link "See how it works":
+      - /url: "#feature-details"
+    - heading "Approve the plan first." [level=2]:
+      - text: Approve the
+      - emphasis: plan
+      - text: first.
+    - paragraph: Review the outline before building. Adjust the units, topics, and learning goals with AI, then approve the structure. Create a complete Course, a standalone Assessment, or an Atom focused on one topic.
+    - list:
+      - listitem:
+        - paragraph: Three ways to start
+        - paragraph: Use a topic, uploaded files, or material from your shared Knowledge Base.
+      - listitem:
+        - paragraph: Research mode
+        - paragraph: Honen gathers current, relevant material so a course is richer than any single upload.
+      - listitem:
+        - paragraph: Connected sources
+        - paragraph: Reach into your internal docs and systems so courses are built from real organizational knowledge.
+    - region "Training you can trace back to the source.":
+      - heading "Training you can trace back to the source." [level=2]
+      - paragraph: Build from your approved knowledge. Citations connect course readings to the original source, so learners can see where an answer comes from.
+      - list:
+        - listitem: Open the cited passage without leaving the lesson.
+        - listitem: Choose who sees the source name, excerpt, or full document.
+      - article:
+        - heading "Your first week" [level=3]
+        - paragraph:
+          - text: Before your first shift, review the team handbook and complete the safety check.
+          - 'button "Source 1: Team handbook"'
+      - text: Team handbook
+      - blockquote: All new team members must review this handbook and complete the safety check before their first shift.
+      - button "Open cited passage"
+    - heading "Edit it by talking." [level=2]:
+      - text: Edit it by
+      - emphasis: talking
+      - text: .
+    - paragraph: Ask AI to rewrite a lesson, add practice, change an assessment, or revise the whole course. Highlight a passage in the preview to show exactly what you want changed.
+    - list:
+      - listitem:
+        - paragraph: Every part is editable
+        - paragraph: Revise outlines, readings, activities, projects, images, and video scenes in the same conversation.
+      - listitem:
+        - paragraph: Your brand and teaching rules
+        - paragraph: Branding, Rules, and Skills guide how AI creates and revises your content.
+    - heading "Watch it build." [level=2]:
+      - text: Watch it
+      - emphasis: build
+      - text: .
+    - paragraph: AI builds the full working draft. Open the learner preview, try the activities, and request revisions before sharing. Return to the same editor whenever your material changes.
+    - heading "One source becomes every format." [level=2]:
+      - text: One source becomes
+      - emphasis: every
+      - text: format.
+    - paragraph: Create lessons, applied projects, and media from the same material. Choose the formats your course needs.
+    - heading "9 activity types" [level=3]
+    - paragraph: Readings, flashcards, quizzes, lectures, podcasts, explainer videos, comics, songs, and arcade games.
+    - heading "Applied projects" [level=3]
+    - paragraph: Applied work that learners do instead of watch, auto-graded by rubric.
+    - heading "Editable images and video" [level=3]
+    - paragraph: Generate or revise images. Edit explainer-video captions, narration, voices, and scenes.
+    - region "Great training. Built to last.":
+      - heading "Great training. Built to last." [level=2]
+      - tablist "Great training. Built to last.":
+        - tab "Templates" [selected]
+        - tab "Review queue"
+        - tab "Agents & Automations"
+      - tabpanel "Templates":
+        - heading "Your best starting point. Every time." [level=3]
+        - paragraph: Give every creator your structure, sources, and teaching approach. Start a Course, Assessment, or Atom from a shared template.
+        - list:
+          - listitem: Your instructions and course structure
+          - listitem: Shared Skills and source folders
+          - listitem: Setup questions tailored to your team
+    - region "From what you know to what they can do.":
+      - heading "From what you know to what they can do." [level=2]
+      - list:
+        - listitem:
+          - heading "Knowledge" [level=3]:
+            - link "Knowledge":
+              - /url: /features/knowledge-base
+          - paragraph: Connect your documents and keep a shared source of truth.
+        - listitem:
+          - heading "Authoring" [level=3]:
+            - link "Authoring":
+              - /url: /features/course-creation
+          - paragraph: Create Courses, Assessments, and Atoms. Shape every part in chat.
+        - listitem:
+          - heading "Learning" [level=3]:
+            - link "Learning":
+              - /url: /features/learner-experience
+          - paragraph: Lessons, practice, projects, and a tutor alongside each learner.
+        - listitem:
+          - heading "Delivery" [level=3]:
+            - link "Delivery":
+              - /url: /features/lms
+          - paragraph: Teach in Honen, publish a Site, or use your existing LMS.
+        - listitem:
+          - heading "Measurement" [level=3]:
+            - link "Measurement":
+              - /url: /features/analytics
+          - paragraph: See progress, find learning gaps, and decide what comes next.
+      - heading "Use Honen as your learning platform" [level=3]:
+        - link "Use Honen as your learning platform":
+          - /url: /features/learner-experience
+      - paragraph: Host your content, teach learners, manage assignments, and track progress in Honen.
+      - heading "Use Honen with your existing LMS" [level=3]:
+        - link "Use Honen with your existing LMS":
+          - /url: /features/lms
+      - paragraph: Create learning content in Honen and deliver it through your LMS with LTI, SCORM, or cmi5.
+    - heading "Frequently Asked Questions" [level=2]
+    - link "Book a demo":
+      - /url: /contact
+    - button "What can I turn into a course?"
+    - region "What can I turn into a course?":
+      - paragraph: Type a topic, or drag in PDFs, slides, manuals, SOPs, or codebooks. Honen can use your material directly, or generate fresh content from it. Your choice.
+    - button "Do I have to use a complex editor?"
+    - region "Do I have to use a complex editor?":
+      - paragraph: No. AI creates and edits the actual course content through conversation. You can revise the structure, lessons, assessments, projects, and media, then inspect the learner preview before sharing.
+    - button "Can I see the structure before it builds?"
+    - region "Can I see the structure before it builds?":
+      - paragraph: Yes. Honen drafts the outline first and waits for your approval. Adjust the units and topics, then approve to start building.
+    - button "Does it stay current after launch?"
+    - region "Does it stay current after launch?":
+      - paragraph: Connected sources keep your Knowledge Base current. Use AI to revise courses when source material or learner needs change, then review the updated preview.
+    - button "How long does a course take to build?"
+    - region "How long does a course take to build?":
+      - paragraph: Most drafts assemble in minutes once your materials are in. Activities render in real time while you watch the lessons fill in.
+    - region "Latest news":
+      - heading "The latest from Honen." [level=2]:
+        - text: The latest
+        - emphasis: from Honen
+        - text: .
+      - paragraph: Product updates, announcements, and the occasional behind-the-scenes.
+      - link "View all news":
+        - /url: /news
+      - link "announcement Introducing Honen Governance Give teams the freedom to create training while keeping company knowledge, brand standards, and publication approvals under your control. Ryan Trattner Oct 20, 2026":
+        - /url: /news/introducing-honen-governance
+        - text: announcement
+        - heading "Introducing Honen Governance" [level=3]
+        - paragraph: Give teams the freedom to create training while keeping company knowledge, brand standards, and publication approvals under your control.
+        - text: Ryan Trattner Oct 20, 2026
+      - link "announcement Introducing Honen Simulations Turn your training videos, photos, manuals, and instructions into interactive 3D simulations, so people can practice real workflows before hands-on training. Ryan Trattner Oct 13, 2026":
+        - /url: /news/introducing-honen-simulations
+        - text: announcement
+        - heading "Introducing Honen Simulations" [level=3]
+        - paragraph: Turn your training videos, photos, manuals, and instructions into interactive 3D simulations, so people can practice real workflows before hands-on training.
+        - text: Ryan Trattner Oct 13, 2026
+      - link "Introducing Funder Reporting Funder Reporting builds the reports workforce programs have to file, from PIRL to RAPIDS, straight from your training data. Pick a format, Honen fills the rest. Ryan Trattner Jul 23, 2026":
+        - /url: /news/introducing-funder-reporting
+        - heading "Introducing Funder Reporting" [level=3]
+        - paragraph: Funder Reporting builds the reports workforce programs have to file, from PIRL to RAPIDS, straight from your training data. Pick a format, Honen fills the rest.
+        - text: Ryan Trattner Jul 23, 2026
+      - link "blog Introducing Honen SCORM Packages Export any Honen course as a SCORM package and run it in the LMS you already use, including Moodle, Canvas, Docebo, and Workday Learning. Full AI course inside, grades to your gradebook. Ryan Trattner Jun 22, 2026":
+        - /url: /news/introducing-honen-scorm-packages
+        - text: blog
+        - heading "Introducing Honen SCORM Packages" [level=3]
+        - paragraph: Export any Honen course as a SCORM package and run it in the LMS you already use, including Moodle, Canvas, Docebo, and Workday Learning. Full AI course inside, grades to your gradebook.
+        - text: Ryan Trattner Jun 22, 2026
+      - link "announcement Introducing Honen Today we're launching Honen, a platform that automates a company's entire learning and training infrastructure Ryan Jun 18, 2026":
+        - /url: /news/introducing-honen
+        - text: announcement
+        - heading "Introducing Honen" [level=3]
+        - paragraph: Today we're launching Honen, a platform that automates a company's entire learning and training infrastructure
+        - text: Ryan Jun 18, 2026
+      - link "blog Introducing Honen Knowledge Bases & Parallel Training Today we're launching Honen Knowledge Bases, one place to store everything your company knows, and a way to teach it to both your people and the AI they work with. Ryan Trattner Jun 18, 2026":
+        - /url: /news/introducing-honen-knowledge-bases-parallel-training
+        - text: blog
+        - heading "Introducing Honen Knowledge Bases & Parallel Training" [level=3]
+        - paragraph: Today we're launching Honen Knowledge Bases, one place to store everything your company knows, and a way to teach it to both your people and the AI they work with.
+        - text: Ryan Trattner Jun 18, 2026
+      - link "announcement Introducing Honen for your LMS Today we're making Honen work inside the LMS you already use. You can now add fully embedded Honen course experiences inside Canvas, Moodle, Skilljar, and more, without moving your courses, your people, or your data anywhere. Ryan Trattner Jun 11, 2026":
+        - /url: /news/introducing-honen-for-your-lms
+        - text: announcement
+        - heading "Introducing Honen for your LMS" [level=3]
+        - paragraph: Today we're making Honen work inside the LMS you already use. You can now add fully embedded Honen course experiences inside Canvas, Moodle, Skilljar, and more, without moving your courses, your people, or your data anywhere.
+        - text: Ryan Trattner Jun 11, 2026
+      - link "StudyFetch Launches Honen for Enterprise, an Agentic Learning Platform That Builds, Delivers, and Improves Training in Minutes StudyFetch today launched Honen for enterprise, an Agentic Learning Platform that builds, delivers, and continuously improves training in minutes rather than months, multiplying what L&D teams can do across an organization. LaSean Knox-Brown May 19, 2026":
+        - /url: /news/studyfetch-launches-honen-for-enterprise-an-agentic-learning-platform-that-build
+        - heading "StudyFetch Launches Honen for Enterprise, an Agentic Learning Platform That Builds, Delivers, and Improves Training in Minutes" [level=3]
+        - paragraph: StudyFetch today launched Honen for enterprise, an Agentic Learning Platform that builds, delivers, and continuously improves training in minutes rather than months, multiplying what L&D teams can do across an organization.
+        - text: LaSean Knox-Brown May 19, 2026
+      - link "StudyFetch Expands Access to NVIDIA Workforce Development Courses for High School Students Through New Honen Platform Through Honen, NVIDIA Academy and NVIDIA Deep Learning Institute coursework can be delivered within a structured, multi-format training environment designed for scalable deployment in school systems. LaSean Knox-Brown Apr 23, 2026":
+        - /url: /news/studyfetch-expands-access-to-nvidia-workforce-development-courses-for-high-schoo
+        - heading "StudyFetch Expands Access to NVIDIA Workforce Development Courses for High School Students Through New Honen Platform" [level=3]
+        - paragraph: Through Honen, NVIDIA Academy and NVIDIA Deep Learning Institute coursework can be delivered within a structured, multi-format training environment designed for scalable deployment in school systems.
+        - text: LaSean Knox-Brown Apr 23, 2026
+      - link "Honen Parent Company StudyFetch Collaborates with Miles College on “Access for All” AI Workforce Initiative Workforce-ready content for the “Access for All” program is being developed by StudyFetch in collaboration with NVIDIA, the global leader in accelerated computing and AI. Funding support from UNCF, StudyFetch, and NVIDIA is intended to help ensure participating students maintain access as they transition through post-secondary pathways. LaSean Knox-Brown Mar 19, 2026":
+        - /url: /news/studyfetch-collaborates-with-miles-college-on-access-for-all-ai-workforce-initia
+        - heading "Honen Parent Company StudyFetch Collaborates with Miles College on “Access for All” AI Workforce Initiative" [level=3]
+        - paragraph: Workforce-ready content for the “Access for All” program is being developed by StudyFetch in collaboration with NVIDIA, the global leader in accelerated computing and AI. Funding support from UNCF, StudyFetch, and NVIDIA is intended to help ensure participating students maintain access as they transition through post-secondary pathways.
+        - text: LaSean Knox-Brown Mar 19, 2026
+      - link "New AI Learning Platform Helps Students and Workers Build Skills for a Fast-Evolving AI Economy StudyFetch, a technology company building AI-native learning products, today announced the launch of Honen, a new workforce training platform designed to help organizations transform expert knowledge into personalized learning experiences that guide each learner toward real-world competency. LaSean Knox-Brown Mar 18, 2026":
+        - /url: /news/new-ai-learning-platform-helps-students-and-workers-build-skills-for-a-fast-evol
+        - heading "New AI Learning Platform Helps Students and Workers Build Skills for a Fast-Evolving AI Economy" [level=3]
+        - paragraph: StudyFetch, a technology company building AI-native learning products, today announced the launch of Honen, a new workforce training platform designed to help organizations transform expert knowledge into personalized learning experiences that guide each learner toward real-world competency.
+        - text: LaSean Knox-Brown Mar 18, 2026
+      - group "News navigation":
+        - button "Previous news" [disabled]
+        - button "Next news"
+  - contentinfo:
+    - heading "Ready to make your first course?" [level=2]:
+      - text: Ready to make your
+      - emphasis: first course
+      - text: "?"
+    - link "Book a demo":
+      - /url: /contact
+    - separator
+    - link "Honen":
+      - /url: /
+      - img "Honen"
+    - paragraph: Teaching and learning infrastructure for anyone.
+    - heading "Product" [level=4]
+    - link "Pricing":
+      - /url: /pricing
+    - link "Explore Courses":
+      - /url: /courses
+    - link "Browse Catalog":
+      - /url: /browse
+    - link "Curricula":
+      - /url: /curricula
+    - link "Projects":
+      - /url: /projects
+    - heading "Features" [level=4]
+    - link "Learner Experience":
+      - /url: /features/learner-experience
+    - link "Course Creation":
+      - /url: /features/course-creation
+    - link "Analytics":
+      - /url: /features/analytics
+    - link "Assignments":
+      - /url: /features/assignments
+    - link "Knowledge Base":
+      - /url: /features/knowledge-base
+    - link "Connect Your LMS":
+      - /url: /features/lms
+    - heading "Solutions" [level=4]
+    - link "Enterprise":
+      - /url: /enterprise
+    - link "Small Business":
+      - /url: /small-business
+    - link "Government":
+      - /url: /government
+    - link "Trades & Unions":
+      - /url: /union
+    - link "Higher Education":
+      - /url: /higher-ed
+    - link "Workforce Pell":
+      - /url: /higher-ed#workforce-pell
+    - link "K-12 Districts":
+      - /url: /k12
+    - link "Assessment Providers":
+      - /url: /testing
+    - link "Workforce Enablement":
+      - /url: /workforce
+    - link "All Industries":
+      - /url: /categories
+    - heading "Resources" [level=4]
+    - link "Accelerate the Workforce":
+      - /url: /accelerate
+    - link "Blog":
+      - /url: /blog
+    - link "News":
+      - /url: /news
+    - link "Changelog":
+      - /url: /changelog
+    - link "Documentation":
+      - /url: /docs
+    - link "Developers":
+      - /url: /developers
+    - link "Contact":
+      - /url: /contact
+    - link "Support":
+      - /url: /support
+    - heading "Legal & Trust" [level=4]
+    - link "Privacy Policy":
+      - /url: /privacy
+    - button "Cookie settings"
+    - button "Do Not Sell or Share My Personal Information"
+    - link "Terms of Service":
+      - /url: /terms
+    - link "Enterprise Terms":
+      - /url: /enterprise-terms
+    - link "NVIDIA K-12 Sponsored Terms":
+      - /url: /nvidia-k12-sponsored-terms
+    - link "Trust Center":
+      - /url: https://trust.studyfetch.com
+    - link "Status":
+      - /url: https://status.studyfetch.com/
+    - 'img "Compliance badges: COPPA, EDSAFE AI Alliance, FERPA, and SOC 2"'
+    - link "llms.txt":
+      - /url: /llms.txt
+    - link "llms-full.txt":
+      - /url: /llms-full.txt
+    - link "developers.txt":
+      - /url: /developers.txt
+    - link "MCP":
+      - /url: /mcp
+    - paragraph: © 2026 Honen By StudyFetch, Inc. All rights reserved.
+  - region "Cookie consent":
+    - paragraph: Cookie consent
+    - paragraph:
+      - text: We use cookies to improve your experience.
+      - link "Privacy Policy":
+        - /url: /privacy
+    - button "Reject"
+    - button "Accept"
+  - region "Notifications alt+T"
+  - alert

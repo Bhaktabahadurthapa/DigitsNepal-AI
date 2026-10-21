@@ -1,0 +1,28 @@
+[project]
+name = "digitsnepal-ai-service"
+version = "0.1.0"
+description = "Stateless AI service for DigitsNepal: embeddings, outlines, lessons, quizzes, tutor answers."
+requires-python = ">=3.12"
+dependencies = [
+  "fastapi>=0.115",
+  "uvicorn[standard]>=0.30",
+  "pydantic>=2.8",
+  "pydantic-settings>=2.4",
+  "httpx>=0.27",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8",
+    "ruff>=0.6",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+
+[tool.ruff]
+line-length = 110
+
+[tool.ruff.lint]
+extend-ignore = ["B008", "SIM905"]

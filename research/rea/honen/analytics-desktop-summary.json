@@ -1,0 +1,49 @@
+{
+ "evidence_id": "ev_ff45cf647b569ebdccd845083517b8992c22053f82c27e84ba857e480e712721",
+ "confidence": "observed",
+ "viewport": {
+  "width": 1440,
+  "height": 900,
+  "device_scale_factor": 1
+ },
+ "start_url": "https://honen.com/features/analytics",
+ "browser": "Chromium 156.0.8078.4",
+ "steps": [
+  {
+   "step_id": "scenario_start",
+   "url": "https://honen.com/features/analytics",
+   "status": "completed",
+   "error": null,
+   "screenshot": "analytics-desktop-scenario_start.png",
+   "screenshot_sha256": "268e351d912d9577d616b235b426148b0f6e8e8257b1cdd61b13994b11a53ef7"
+  },
+  {
+   "step_id": "s0",
+   "url": "https://honen.com/features/analytics",
+   "status": "completed",
+   "error": null,
+   "screenshot": "analytics-desktop-s0.png",
+   "screenshot_sha256": "f37118714bedc46126a8b9ee68b513bfebe397b2d5bc3ad3879d57310dba2d4d"
+  },
+  {
+   "step_id": "p1",
+   "url": "https://honen.com/features/analytics",
+   "status": "completed",
+   "error": null,
+   "screenshot": "analytics-desktop-p1.png",
+   "screenshot_sha256": "7125a7920f31eec5aaa2e9c9cdb4b09eed34cc163f9dd37979a36722283cfeeb"
+  },
+  {
+   "step_id": "p2",
+   "url": "https://honen.com/features/analytics",
+   "status": "completed",
+   "error": null,
+   "screenshot": "analytics-desktop-p2.png",
+   "screenshot_sha256": "ebcb4ab1b98bfc1e7ecfd4961cdb45e77bb88a7db6b44ccd70c7f000a4204dfa",
+   "a11y": "analytics-desktop-p2-a11y.txt",
+   "a11y_sha256": "b886e6323e1e39eb9db84f98fee73d4c00e4f2c0031e11356dee3b1c8c206bae"
+  }
+ ],
+ "events": [],
+ "completeness": "complete"
+}

@@ -1,0 +1,65 @@
+{
+ "evidence_id": "ev_62884f385b75f473e00e057f269c9245d58873c196b80c2855b7bfa01e622a47",
+ "confidence": "observed",
+ "viewport": {
+  "width": 1440,
+  "height": 900,
+  "device_scale_factor": 1
+ },
+ "start_url": "https://honen.com/features/learner-experience",
+ "browser": "Chromium 156.0.8078.4",
+ "steps": [
+  {
+   "step_id": "scenario_start",
+   "url": "https://honen.com/features/learner-experience",
+   "status": "completed",
+   "error": null,
+   "screenshot": "learner-experience-desktop-scenario_start.png",
+   "screenshot_sha256": "8f0d6c35bfbd3790c177f93199b9ff79c9d6fea7b7af9653a4538ccfc87dfcc3"
+  },
+  {
+   "step_id": "s0",
+   "url": "https://honen.com/features/learner-experience",
+   "status": "completed",
+   "error": null,
+   "screenshot": "learner-experience-desktop-s0.png",
+   "screenshot_sha256": "aa9e83413c14a7a055db75a076f446969401d1e53c149d0caf5392a0646e73c1"
+  },
+  {
+   "step_id": "p1",
+   "url": "https://honen.com/features/learner-experience",
+   "status": "completed",
+   "error": null,
+   "screenshot": "learner-experience-desktop-p1.png",
+   "screenshot_sha256": "2d12bf66489ea077aabf4182407366a53260716295a1d5027f6dcf7fb4e8456c"
+  },
+  {
+   "step_id": "p2",
+   "url": "https://honen.com/features/learner-experience",
+   "status": "completed",
+   "error": null,
+   "screenshot": "learner-experience-desktop-p2.png",
+   "screenshot_sha256": "0a6464413d4a7849ef84378d3ed2617970c6e634337c713a8df814e74d5cc856"
+  },
+  {
+   "step_id": "p3",
+   "url": "https://honen.com/features/learner-experience",
+   "status": "completed",
+   "error": null,
+   "screenshot": "learner-experience-desktop-p3.png",
+   "screenshot_sha256": "c04eef5538af3a3edb41e6ff19c9b8ad63c1070e5a08f170ec4e7a1ffb9466bf"
+  },
+  {
+   "step_id": "p4",
+   "url": "https://honen.com/features/learner-experience",
+   "status": "completed",
+   "error": null,
+   "screenshot": "learner-experience-desktop-p4.png",
+   "screenshot_sha256": "15fd5bfc27eea142180d3ef9954618e3a2e3bec74e258d02aca59189fc346c01",
+   "a11y": "learner-experience-desktop-p4-a11y.txt",
+   "a11y_sha256": "25bd3b8a14ef3709f4805cf5bac144c062dd91496b4be6e67f5b51bd83aa4c3f"
+  }
+ ],
+ "events": [],
+ "completeness": "complete"
+}

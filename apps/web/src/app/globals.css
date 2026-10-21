@@ -1,0 +1,146 @@
+@import "tailwindcss";
+
+/* DigitsNepal design tokens. Contrast pairs are chosen to meet WCAG 2.2 AA (≥4.5:1 for text). */
+:root {
+  --navy: #0d2338;
+  --navy-700: #163452;
+  --teal: #0d9488;
+  --teal-700: #0f766e; /* text-on-light teal: 5.4:1 on white */
+  --teal-50: #f0fdfa;
+  --red: #dc2626;
+  --red-700: #b91c1c;
+  --bg: #f8fafc;
+  --surface: #ffffff;
+  --text: #0f172a;
+  --muted: #64748b; /* 4.76:1 on white */
+  --border: #e2e8f0;
+  --ring: #0d9488;
+  --amber: #b45309;
+  --amber-50: #fffbeb;
+  --green: #15803d;
+  --green-50: #f0fdf4;
+  --radius: 0.75rem;
+}
+
+@theme inline {
+  --color-navy: var(--navy);
+  --color-navy-700: var(--navy-700);
+  --color-teal: var(--teal);
+  --color-teal-700: var(--teal-700);
+  --color-teal-50: var(--teal-50);
+  --color-red: var(--red);
+  --color-red-700: var(--red-700);
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-ink: var(--text);
+  --color-muted: var(--muted);
+  --color-line: var(--border);
+  --color-ring: var(--ring);
+  --color-amber: var(--amber);
+  --color-amber-50: var(--amber-50);
+  --color-green: var(--green);
+  --color-green-50: var(--green-50);
+  --font-sans: var(--font-inter), var(--font-devanagari), ui-sans-serif, system-ui, sans-serif;
+  --font-nepali: var(--font-devanagari), var(--font-inter), sans-serif;
+  --radius-xl: var(--radius);
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  line-height: 1.6;
+}
+
+/* Nepali text needs a little more line height for vowel signs. */
+:lang(ne) {
+  font-family: var(--font-devanagari);
+  line-height: 1.75;
+}
+
+:focus-visible {
+  outline: 3px solid var(--ring);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Rendered lesson Markdown */
+.prose-lesson {
+  font-size: 1.0625rem;
+  max-width: 72ch;
+}
+.prose-lesson h2 {
+  font-size: 1.375rem;
+  font-weight: 700;
+  margin: 1.75rem 0 0.75rem;
+  color: var(--navy);
+}
+.prose-lesson h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin: 1.25rem 0 0.5rem;
+}
+.prose-lesson p {
+  margin: 0 0 1rem;
+}
+.prose-lesson ul,
+.prose-lesson ol {
+  margin: 0 0 1rem 1.25rem;
+}
+.prose-lesson ul {
+  list-style: disc;
+}
+.prose-lesson ol {
+  list-style: decimal;
+}
+.prose-lesson li {
+  margin: 0.25rem 0;
+}
+.prose-lesson code {
+  background: #f1f5f9;
+  padding: 0.1rem 0.35rem;
+  border-radius: 0.25rem;
+  font-size: 0.9em;
+}
+.prose-lesson pre {
+  background: #0f172a;
+  color: #e2e8f0;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  margin: 0 0 1rem;
+}
+.prose-lesson pre code {
+  background: transparent;
+  padding: 0;
+}
+.prose-lesson a {
+  color: var(--teal-700);
+  text-decoration: underline;
+}
+.prose-lesson sup a,
+.prose-lesson .cite {
+  text-decoration: none;
+  font-weight: 600;
+}
+.prose-lesson blockquote {
+  border-left: 4px solid var(--teal);
+  padding-left: 1rem;
+  color: var(--muted);
+  margin: 0 0 1rem;
+}

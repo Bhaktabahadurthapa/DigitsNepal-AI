@@ -1,0 +1,18 @@
+Solar Energy Basics for Community Schools
+Written by the DigitsNepal team for testing. Released under CC BY 4.0.
+
+What is solar energy
+Solar energy is energy that comes from sunlight. Solar panels turn sunlight into electricity using photovoltaic cells. Each photovoltaic cell is made of silicon, a material that releases electrons when light hits it. The moving electrons create an electric current.
+
+Nepal receives about 300 sunny days a year in many districts, which makes solar power useful for schools that are far from the national grid.
+
+How a solar home system works
+A basic solar home system has four parts: the solar panel, the charge controller, the battery, and the inverter. The charge controller protects the battery from overcharging. The battery stores energy for use at night. The inverter changes direct current into alternating current for normal appliances.
+
+Panels should face south in Nepal and be tilted at an angle close to the local latitude, usually between 26 and 30 degrees.
+
+Looking after solar panels
+Dust and bird droppings reduce how much electricity a panel produces. Clean panels with plain water and a soft cloth every two weeks during the dry season. Never stand on a panel. Check the battery water level every month if the battery is a flooded lead acid type.
+
+Safety rules
+Always switch off the system before touching any wires. Batteries contain acid and can release hydrogen gas, so keep them in a ventilated place away from flames. Only trained technicians should repair inverters.

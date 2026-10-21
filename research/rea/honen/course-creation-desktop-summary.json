@@ -1,0 +1,79 @@
+{
+ "evidence_id": "ev_3487643ad234a7d2981475a0154b981a638577c9d5e05f5bb6786f41ee604f6a",
+ "confidence": "observed",
+ "viewport": {
+  "width": 1440,
+  "height": 900,
+  "device_scale_factor": 1
+ },
+ "start_url": "https://honen.com/features/course-creation",
+ "browser": "Chromium 156.0.8078.4",
+ "steps": [
+  {
+   "step_id": "scenario_start",
+   "url": "https://honen.com/features/course-creation",
+   "status": "completed",
+   "error": null,
+   "screenshot": "course-creation-desktop-scenario_start.png",
+   "screenshot_sha256": "32a510b54df330e3141b9f772deb93508d945fc5df32d1a360c62b922f209f0b"
+  },
+  {
+   "step_id": "s0",
+   "url": "https://honen.com/features/course-creation",
+   "status": "completed",
+   "error": null,
+   "screenshot": "course-creation-desktop-s0.png",
+   "screenshot_sha256": "6edb7330dfa7b1bb17672112a9e80a5bc50c6f1157c9d5675d5c8a397cf0dde7"
+  },
+  {
+   "step_id": "p1",
+   "url": "https://honen.com/features/course-creation",
+   "status": "completed",
+   "error": null,
+   "screenshot": "course-creation-desktop-p1.png",
+   "screenshot_sha256": "54d7cb74cded7c589c97b41784f2510c909b653dfa4ca7b2b521e2a7e93af074"
+  },
+  {
+   "step_id": "p2",
+   "url": "https://honen.com/features/course-creation",
+   "status": "completed",
+   "error": null,
+   "screenshot": "course-creation-desktop-p2.png",
+   "screenshot_sha256": "ff554277ec3d007b8cc779964595eb628b4a09004c25e969c82c816d1795001d"
+  },
+  {
+   "step_id": "p3",
+   "url": "https://honen.com/features/course-creation",
+   "status": "completed",
+   "error": null,
+   "screenshot": "course-creation-desktop-p3.png",
+   "screenshot_sha256": "8856530a2ce2ada026fc5e97259d5422a9e56a4e3b143d40e3b695cbebe1e030"
+  },
+  {
+   "step_id": "p4",
+   "url": "https://honen.com/features/course-creation",
+   "status": "completed",
+   "error": null,
+   "screenshot": "course-creation-desktop-p4.png",
+   "screenshot_sha256": "12cb64903043777a00643f1001d537acbc064c677f8a8c76f1cd7d7263c25186"
+  },
+  {
+   "step_id": "p5",
+   "url": "https://honen.com/features/course-creation",
+   "status": "completed",
+   "error": null,
+   "screenshot": "course-creation-desktop-p5.png",
+   "screenshot_sha256": "2ca0f597a4eaf6e78e39238cd23a5376997c24dc4ff4305cc24680129ddbe1ec",
+   "a11y": "course-creation-desktop-p5-a11y.txt",
+   "a11y_sha256": "96244a69123a5352512a1113fd6a843bc4c7ddf672de1b36d262b8bdc0372149"
+  }
+ ],
+ "events": [
+  {
+   "kind": "console",
+   "level": "warning",
+   "text": "[analytics] mixpanel-browser not available"
+  }
+ ],
+ "completeness": "complete"
+}

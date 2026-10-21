@@ -1,0 +1,49 @@
+{
+ "evidence_id": "ev_8e8d6bbe3540216a4301dc333ce0b44ba9b0530d06b6d058a473bbc550a8fc04",
+ "confidence": "observed",
+ "viewport": {
+  "width": 1440,
+  "height": 900,
+  "device_scale_factor": 1
+ },
+ "start_url": "https://honen.com/features/assignments",
+ "browser": "Chromium 156.0.8078.4",
+ "steps": [
+  {
+   "step_id": "scenario_start",
+   "url": "https://honen.com/features/assignments",
+   "status": "completed",
+   "error": null,
+   "screenshot": "assignments-desktop-scenario_start.png",
+   "screenshot_sha256": "ed5c8c548003d92ae0eaa5941ffad06c1e6ab1e2d2fa85a51603efbec12d0ed9"
+  },
+  {
+   "step_id": "s0",
+   "url": "https://honen.com/features/assignments",
+   "status": "completed",
+   "error": null,
+   "screenshot": "assignments-desktop-s0.png",
+   "screenshot_sha256": "d36cb0dd9f03759a7aad5524cef241254e5c50212989679ac35c7ce6aea92506"
+  },
+  {
+   "step_id": "p1",
+   "url": "https://honen.com/features/assignments",
+   "status": "completed",
+   "error": null,
+   "screenshot": "assignments-desktop-p1.png",
+   "screenshot_sha256": "e9fd7e682026014d78bb1dab89db8aa4048466f7c15414da7afd4d3dd33562be"
+  },
+  {
+   "step_id": "p2",
+   "url": "https://honen.com/features/assignments",
+   "status": "completed",
+   "error": null,
+   "screenshot": "assignments-desktop-p2.png",
+   "screenshot_sha256": "d435b39cf7491e2ebce5873888f90c629a90fe8d175d575f39aa19414551c44a",
+   "a11y": "assignments-desktop-p2-a11y.txt",
+   "a11y_sha256": "0f6fa121bd525885850322654219a4626982decb9a371102bc1bb1296f42dc29"
+  }
+ ],
+ "events": [],
+ "completeness": "complete"
+}

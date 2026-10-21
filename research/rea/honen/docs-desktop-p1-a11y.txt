@@ -1,0 +1,99 @@
+- document:
+  - link "Skip to content":
+    - /url: "#hs-main"
+  - banner:
+    - link "Honen Academy":
+      - /url: /docs
+    - navigation "Site sections":
+      - link "Overview":
+        - /url: /docs
+      - link "Product docs":
+        - /url: /docs/docs/product-docs
+      - link "Honen Connector API":
+        - /url: /docs/docs/api-6ab3670c51fd2d748e6357ad
+    - search "Site search":
+      - textbox "Search this site":
+        - /placeholder: Search
+    - navigation "Main":
+      - link "Docs":
+        - /url: https://honen.com/docs/docs
+      - link "Go to Honen":
+        - /url: https://honen.com
+  - button "Open Ask Honen": Ask Honen
+  - complementary "Site navigation":
+    - navigation:
+      - link "Ask Honen":
+        - /url: /docs/assistant
+      - link "Overview":
+        - /url: /docs
+      - paragraph: Docs
+      - group: Getting started
+      - group: Knowledge Base
+      - group: Creating content
+      - group: Learning
+      - group: Delivery
+      - group: Governance
+      - group: Administration
+      - group: Agents and integrations
+      - group: Adaptive learning
+      - paragraph: API references
+      - link "Honen Connector API":
+        - /url: /docs/docs/api-6ab3670c51fd2d748e6357ad
+  - separator "Resize navigation"
+  - main:
+    - heading "Build, teach, and learn with Honen." [level=1]
+    - paragraph: Step-by-step guides to creating courses, organizing knowledge, deploying agents, and running your academy.
+    - heading "Docs for AI tools" [level=2]
+    - paragraph: Use a quick guide index or the complete documentation.
+    - navigation "Docs for AI tools":
+      - link "llms.txt":
+        - /url: /docs/llms.txt
+      - link "llms-full.txt":
+        - /url: /docs/llms-full.txt
+    - heading "Choose your next step" [level=2]
+    - link "Explore all guides Find every Honen workflow, organized by what you want to achieve.":
+      - /url: https://honen.com/docs/docs/6ab3811882700be81b7d0305
+      - heading "Explore all guides" [level=3]
+      - paragraph: Find every Honen workflow, organized by what you want to achieve.
+    - link "Create your first course Turn your source material into lessons, practice, and assessments.":
+      - /url: https://honen.com/docs/docs/6ab35ee5da8e0901468ca374
+      - heading "Create your first course" [level=3]
+      - paragraph: Turn your source material into lessons, practice, and assessments.
+    - link "Bring in your knowledge Import documents, connect sources, and build a shared library.":
+      - /url: https://honen.com/docs/docs/6ab36192effafe59361d23d7
+      - heading "Bring in your knowledge" [level=3]
+      - paragraph: Import documents, connect sources, and build a shared library.
+    - link "Explore the learner experience See how people study, practice, get help, and demonstrate skills.":
+      - /url: https://honen.com/docs/docs/6ab35efbda8e0901468ca3e5
+      - heading "Explore the learner experience" [level=3]
+      - paragraph: See how people study, practice, get help, and demonstrate skills.
+    - link "Launch your academy Brand your site, organize learning, and reach your audience.":
+      - /url: https://honen.com/docs/docs/6ab35eebda8e0901468ca397
+      - heading "Launch your academy" [level=3]
+      - paragraph: Brand your site, organize learning, and reach your audience.
+    - link "Connect your LMS Choose the right delivery path for your learning platform.":
+      - /url: https://honen.com/docs/docs/6ab35eeada8e0901468ca392
+      - heading "Connect your LMS" [level=3]
+      - paragraph: Choose the right delivery path for your learning platform.
+    - heading "Docs" [level=2]
+    - link "Product docs":
+      - /url: /docs/docs/product-docs
+      - heading "Product docs" [level=3]
+    - link "Honen Connector API":
+      - /url: /docs/docs/api-6ab3670c51fd2d748e6357ad
+      - heading "Honen Connector API" [level=3]
+    - paragraph: Honen Academy
+    - link "Academy By Honen":
+      - /url: https://honen.com
+      - text: Academy By
+      - img "Honen"
+  - region "Cookie consent":
+    - paragraph: Cookie consent
+    - paragraph:
+      - text: We use cookies to improve your experience.
+      - link "Privacy Policy":
+        - /url: /privacy
+    - button "Reject"
+    - button "Accept"
+  - region "Notifications alt+T"
+  - alert
